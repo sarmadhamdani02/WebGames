@@ -85,7 +85,8 @@ body{
 .title-screen .title h1 span{
     color: yellow;
     font-size: 5vw;
-    font-family: 'Play', sans-serif;
+    font-family: 'Press Start 2P', cursive;
+
 }
 
 .title-screen .title h3{
@@ -196,7 +197,61 @@ body{
     
 }
 
+@media (max-width:600px) {
+    
+    
+    .title-screen .title{
+        margin-top: 15vh;
+        font-size: 3.3vw;
+    }
+    
+    .title-screen .title h3{
+        font-size: 7vw;
+    }
 
-/* .game-panel-X{
-    background-color: transparent;
-} */
+    .title-screen .btn-div{
+        margin-top: 20vh;
+    }
+
+    .btn{
+        font-size: 5vw;
+    }
+
+    .game-container{
+        height: 50vh;
+        width: 80vw;
+    }
+
+    .game-panel{
+        font-size: 20vw;
+        height: 16.66vh;
+        width: 26.66vw;
+    }
+
+    .main h1{
+        font-size: 10vw;
+    }
+
+    .main h1 .player{
+        font-size: 15vw;
+    }
+  
+    .win-screen h1{
+        font-size: 8vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .win-screen h1 .winner-name{
+        font-size: 12vw;
+    }
+
+    .win-screen h1 .winner{
+        font-size: 8vw;
+    }
+
+
+}

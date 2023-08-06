@@ -15,7 +15,7 @@ var panel = document.getElementsByClassName("game-panel");
 
 var tl = gsap.timeline();
 
-gsap.from(".title-screen .title, .win-screen h1 ",{
+gsap.from(".title-screen .title, .win-screen h1",{
     y : 6,
     repeat:-1,
     yoyo:true,

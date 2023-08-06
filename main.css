@@ -1,0 +1,20 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.nav-bar{
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 50px;
+    background-color: rgb(0, 144, 144);
+}

@@ -15,6 +15,21 @@ var panel = document.getElementsByClassName("game-panel");
 
 var tl = gsap.timeline();
 
+gsap.from(".title-screen .title, .win-screen h1 ",{
+    y : 6,
+    repeat:-1,
+    yoyo:true,
+    ease:"power1"
+})
+
+gsap.from(".player",{
+    
+    repeat:-1,
+    yoyo:true,
+    duration:2,
+    ease:"linear"
+})
+
 startBtn.addEventListener("click", function () {
   turnHead.style.display = "flex";
   turnName.innerHTML = "O";
@@ -443,6 +458,7 @@ function check() {
     return false;
   } else if (count == 8) {
     winScreen.style.display = "flex";
+    document.querySelector(".win-screen h1").style.color = "yellow";
     document.querySelector(".win-screen h1").innerText = "Game Drawn";
   } else {
     console.log("not");

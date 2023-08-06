@@ -26,6 +26,26 @@ body{
     gap: 20px;
 }
 
+
+.win-screen h1{
+    font-size: 3vw;
+    font-family: 'Press Start 2P', cursive;
+}
+
+.win-screen h1 .winner-name{
+    -webkit-text-stroke: 2px white;
+    color: transparent;
+    font-size: 5vw;
+    font-family: 'Play', sans-serif;
+    
+}
+
+.win-screen h1 .winner{
+    color: #00c7c7;
+    -webkit-text-stroke: 0.8px black;
+}
+
+
 .win-screen .btn{
     margin-top: 20vh;
 }
@@ -37,13 +57,14 @@ body{
     height: 100vh;
     width: 100vw;
     backdrop-filter: blur(5px);
-    background-color:  rgba(0, 255, 13, 0.300);
+    background-color:  rgba(0, 0, 0, 0.37);
     position: absolute;
     z-index: 99;
 }
 
 .title-screen .title{
-    
+    font-family: 'Press Start 2P', cursive;
+    user-select: none;
     line-height: 45px;
     margin-top: 20px;
     align-self: flex-start;
@@ -55,13 +76,16 @@ body{
 }
 
 .title-screen .title h1{
+    text-transform: lowercase;
     color: white;
-    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-family: 'Press Start 2P', cursive;
+
 }
 
 .title-screen .title h1 span{
     color: yellow;
-    font-family: sans-serif;
+    font-size: 5vw;
+    font-family: 'Play', sans-serif;
 }
 
 .title-screen .title h3{
@@ -86,11 +110,13 @@ body{
     border-radius: 20px;
     color: black;
     cursor: pointer;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Press Start 2P', cursive;
     font-size: 2vw;
 }
 
 .btn:hover{
+    color: white;
+    border-color: white;
     background-color: rgb(0, 199, 199);
 }
 
@@ -116,10 +142,12 @@ body{
     color: white;
     font-size: 3vw;
     user-select: none;
+    font-family: 'Play', sans-serif;
 }
 
 .main h1 .player{
-    -webkit-text-stroke: 1px white;
+    font-family: 'Play', sans-serif;
+    -webkit-text-stroke: 2px white;
     color: transparent;
     font-size: 4.5vw;
 

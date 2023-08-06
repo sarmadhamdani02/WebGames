@@ -1,0 +1,157 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.title-screen{
+    left: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    /* background-color: green; */
+    height: 100vh;
+    width: 100vw;
+    backdrop-filter: blur(1.5px);
+    background-color:  rgba(0, 64, 255, 0.527);
+    position: absolute;
+    z-index: 99;
+}
+
+.win-screen{
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(225, 65, 190, 0.295);
+    z-index: 99;
+    display: none;
+}
+
+.title-screen .title{
+    /* background-color: pink; */
+    line-height: 45px;
+    margin-top: 20px;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;    
+}
+
+.title-screen .title h1{
+    align-self: flex-start;
+    color: white;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+.title-screen .title h1 span{
+    color: yellow;
+    font-family: sans-serif;
+}
+
+.title-screen .title h3{
+    font-weight: 800;
+    font-size: 2.3vw;
+    color: yellow;
+    text-transform: uppercase;
+}
+
+.btn-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-div button{
+    background-color: aqua;
+    padding: 20px 40px;
+    border: 1px solid black;
+    outline: none;
+    border-radius: 20px;
+    color: black;
+    cursor: pointer;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2vw;
+}
+
+.btn-div button:hover{
+    background-color: rgb(0, 199, 199);
+}
+
+.btn-div button:hover{
+    background-color: aqua;
+}
+
+.main{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(95, 135, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main h1{
+    display: none;
+    position: absolute;
+    align-self: start;
+    color: white;
+    font-size: 3vw;
+}
+
+.main .player{
+    color: yellow;
+
+}
+
+.game-container{
+    background-color: royalblue;
+    backdrop-filter: blur(5px);
+    border: 2px solid rgb(208, 219, 255);
+    border-radius: 30px;
+    height: 70vh;
+    width: 35vw;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    overflow: hidden;
+}
+
+.game-panel{
+    user-select: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    border: 1px solid rgb(126, 158, 255);
+    height: 23.33vh;
+    width: 11.55vw;
+    cursor: pointer;
+    color: transparent;
+    font-weight: 999;
+    font-size: 7vw;
+    -webkit-text-stroke: 2px rgb(126, 158, 255);
+}
+
+.game-panel:hover{
+    background-color: rgb(28, 78, 228);
+    
+}
+
+.game-panel:active{
+    background-color: transparent;
+    
+}
+
+
+/* .game-panel-X{
+    background-color: transparent;
+} */

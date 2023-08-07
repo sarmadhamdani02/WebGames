@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- adding google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js" integrity="sha512-16esztaSRplJROstbIIdwX3N97V1+pZvV33ABoG1H2OyTttBxEGkTsoIVsiP1iaTtM8b3+hu2kB6pQ4Clr5yug==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="script.js"></script>
+
+    <title>♟️ Chess Game</title>
+</head>
+<body>
+
+    <div class="main">
+        <div class="player1">
+            <div class="game-container game-container-left">
+                <div class="game-content game-cont-1">
+                    
+                    <div class="panel panel-w">
+                        <span class="coord">8</span>
+                        <img src="media/black_rook.png" alt="" class="black-rook">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/black_knight.png" alt="" class="black-knight">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/black_bishop.png" alt="" class="black-bishop">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/black_queen.png" alt="" class="black-queen">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/black_king.png" alt="" class="black-king">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/black_bishop.png" alt="" class="black-bishop">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/black_knight.png" alt="" class="black-knight-right">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/black_rook.png" alt="" class="black-rook">
+
+                    </div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">7</span>
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/black_pawn (2).png" alt="" class="black-pawn">
+                    </div>
+                    
+                    <div class="panel panel-w">
+                        <span class="coord">6</span>
+                    </div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">5</span>
+                    </div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    
+                    <div class="panel panel-w">
+                        <span class="coord">4</span>
+                    </div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">3</span>
+                    </div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    
+                    <div class="panel panel-w">
+                        <img class="pawn" src="media/white_pawn.png" alt="" srcset="">
+                        <span class="coord">2</span>
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/white_pawn.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/white_pawn.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/white_pawn.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/white_pawn.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/white_pawn.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-w">
+                        <img src="media/white_pawn.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-b">
+                        <img src="media/white_pawn.png" alt="" srcset="">
+                    </div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">1 A</span>
+                        <img class="white-rook" src="media/white_rook.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-w">
+                        <span class="coord">B</span>
+                        <img class="white-bishop" src="media/white_bishop.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-b">
+                        <span class="coord">C</span>
+                        <img class="white-knight" src="media/white_knight.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-w">
+                        <span class="coord">D</span>
+                        <img src="media/white_queen.png" alt="" class="white-queen">
+                    </div>
+                    <div class="panel panel-b">
+                        <span class="coord">E</span>
+                        <img src="media/white_king.png" alt="" class="white-king">
+                    </div>
+                    <div class="panel panel-w">
+                        <span class="coord">F</span>
+                        <img class="white-knight-right" src="media/white_knight.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-b">
+                        <span class="coord">G</span>
+                        <img class="white-bishop" src="media/white_bishop.png" alt="" srcset="">
+                    </div>
+                    <div class="panel panel-w">
+                        <img class="white-rook" src="media/white_rook.png" alt="" srcset="">
+                        <span class="coord">H</span>
+                    </div>
+                    
+                    
+                </div>
+            </div>
+        </div>
+        <div class="player2">
+            <div class="game-container game-container-right">
+                <div class="game-content game-cont-2">
+                
+                    <div class="panel panel-w">
+                        <span class="coord">8</span>
+                    </div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">7</span>
+                    </div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    
+                    <div class="panel panel-w">
+                        <span class="coord">6</span>
+                    </div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">5</span>
+                    </div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    
+                    <div class="panel panel-w">
+                        <span class="coord">4</span>
+                    </div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">3</span>
+                    </div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    
+                    <div class="panel panel-w">
+                        <span class="coord">2</span>
+                    </div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+                    <div class="panel panel-w"></div>
+                    <div class="panel panel-b"></div>
+
+                    <div class="panel panel-b">
+                        <span class="coord">1 H</span>
+                    </div>
+                    <div class="panel panel-w">
+                        <span class="coord">G</span>
+                    </div>
+                    <div class="panel panel-b">
+                        <span class="coord">F</span>
+                    </div>
+                    <div class="panel panel-w">
+                        <span class="coord">E</span>
+                    </div>
+                    <div class="panel panel-b">
+                        <span class="coord">D</span>
+                    </div>
+                    <div class="panel panel-w">
+                        <span class="coord">C</span>
+                    </div>
+                    <div class="panel panel-b">
+                        <span class="coord">B</span>
+                    </div>
+                    <div class="panel panel-w">
+                        <span class="coord">A</span>
+                    </div>
+                    
+                </div>
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
+
+
+<!-- credit: <a href="https://www.flaticon.com/free-icons/pawn" title="pawn icons">Pawn icons created by Stockio - Flaticon</a> -->

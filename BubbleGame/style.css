@@ -55,7 +55,8 @@ body{
 }
 
 .panel-content{
-    background-color: pink;
+    z-index: 1;
+    background-color: #ffffff;
     height: calc(100% - 60px);
     width: 100%;
     gap: 10px;
@@ -81,4 +82,53 @@ body{
 .bubble:hover{
     cursor: pointer;
     background-color: #211594;
+}
+
+.game-over-screen{
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    z-index: 99;
+    background-color: rgba(28, 77, 223, 0.377);
+    backdrop-filter: blur(5px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+
+}
+
+.game-over-screen h1{
+    text-transform: uppercase;
+    color: #ffffff;
+    font-size: 777;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.game-over-screen h3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-transform: capitalize;
+}
+
+.game-over-screen h3 .current-score{
+    color: #ffffff;
+    font-size: 40px;
+}
+
+.game-over-screen button{
+    background-color: transparent;
+    background-color: rgb(28, 76, 223);
+    font-size: 20px;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    padding: 10px 40px;
+    color: white;
+    cursor: pointer;
+}
+
+.game-over-screen button:hover{
+    border-color: white;
 }

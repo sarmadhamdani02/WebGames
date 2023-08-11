@@ -1,5 +1,8 @@
 var panelContent = document.querySelector(".panel-content");
 var timerBox = document.querySelector(".timer-box");
+var hitBox = document.querySelector(".hit-box");
+var scoreBox = document.querySelector(".score-box");
+var score = 0;
 
 function bubbleMaker(panelContent) {
   var query = "";
@@ -18,7 +21,8 @@ function bubbleMaker(panelContent) {
   document.querySelector(".panel-content").innerHTML = query;
 }
 
-var time = 60;
+var time = 3;
+timerBox.innerHTML = time;
 function timeFunction() {
     var timerInterval = setInterval(() => {
     if (time > 0) {
@@ -31,5 +35,31 @@ function timeFunction() {
   }, 1000);
 }
 
+function generateHit() {
+    let hitNum = Math.floor(Math.random()*10);
+    hitBox.innerHTML = hitNum;
+}
+
+panelContent.addEventListener("click", (dets)=>{//Event bubbling
+    if(dets.target.innerHTML == hitBox.innerHTML){
+        score += 10;
+        scoreBox.innerHTML = score;
+        if (score >= 0) {
+            scoreBox.style.color = "rgb(28, 76, 223)";
+        }
+        generateHit();
+        bubbleMaker(panelContent);
+    }
+    else{
+        score -= 5;
+        scoreBox.innerHTML = score;
+        if (score < 0) {
+            scoreBox.style.color = "red";
+        }
+
+    }
+})
+
+generateHit();
 timeFunction();
 bubbleMaker(panelContent);

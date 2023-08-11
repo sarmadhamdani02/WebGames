@@ -11,20 +11,25 @@
     <title>Bubble Game</title>
   </head>
   <body>
+    <div class="game-over-screen">
+        <h1>game over</h1>
+        <h3>your score:&nbsp<span class="current-score">0</span></h3>
+        <button>RETRY</button>
+    </div>
     <div class="main">
       <div class="main-panel">
         <div class="panel-nav">
           <div class="elem">
             <h4>hit</h4>
-            <div class="box">5</div>
+            <div class="box hit-box">5</div>
           </div>
           <div class="elem">
             <h4>timer</h4>
-            <div class="box timer-box">60</div>
+            <div class="box timer-box"></div>
           </div>
           <div class="elem">
             <h4>score</h4>
-            <div class="box">8</div>
+            <div class="box score-box">0</div>
           </div>
         </div>
         <div class="panel-content"></div>

@@ -2,6 +2,10 @@ var panelContent = document.querySelector(".panel-content");
 var timerBox = document.querySelector(".timer-box");
 var hitBox = document.querySelector(".hit-box");
 var scoreBox = document.querySelector(".score-box");
+var gameOverScreen = document.querySelector(".game-over-screen");
+var gameOverScore = document.querySelector(".game-over-screen .current-score");
+var retplayBtn = document.querySelector(".game-over-screen button");
+
 var score = 0;
 
 function bubbleMaker(panelContent) {
@@ -21,7 +25,16 @@ function bubbleMaker(panelContent) {
   document.querySelector(".panel-content").innerHTML = query;
 }
 
-var time = 3;
+function gameOver() {
+    gameOverScreen.style.display = "flex";
+    gsap.from(".game-over-screen",{
+        y:"-100vh",
+        duration:0.3
+    });
+    gameOverScore.innerHTML = score;
+}
+
+var time = 60;
 timerBox.innerHTML = time;
 function timeFunction() {
     var timerInterval = setInterval(() => {
@@ -30,7 +43,8 @@ function timeFunction() {
       timerBox.innerHTML = time;
     }
     else{
-        clearInterval(timer);
+        gameOver();
+        clearInterval(timerInterval);
     }
   }, 1000);
 }
@@ -56,9 +70,22 @@ panelContent.addEventListener("click", (dets)=>{//Event bubbling
         if (score < 0) {
             scoreBox.style.color = "red";
         }
+        generateHit();
+        bubbleMaker(panelContent);
 
     }
-})
+});
+
+retplayBtn.addEventListener("click", () => {
+    score = 0;
+    gameOverScreen.style.display = "none"
+    generateHit();
+    timeFunction();
+    bubbleMaker(panelContent);
+    time = 61;
+});
+
+
 
 generateHit();
 timeFunction();

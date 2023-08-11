@@ -84,14 +84,43 @@ body{
     background-color: #211594;
 }
 
+.menu-screen{
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(0, 255, 0, 0.434);
+    backdrop-filter: blur(5px);
+    position: absolute;
+    z-index: 99;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-screen button{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    cursor: pointer;
+    user-select: none;
+    font-size: 30px;
+    background-color: #1c29df;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 10px 20px;
+
+}
+
+.menu-screen button:hover{
+    border-color: white;
+}
+
 .game-over-screen{
     height: 100vh;
     width: 100vw;
     position: absolute;
     z-index: 99;
-    background-color: rgba(28, 77, 223, 0.377);
+    background-color: rgba(22, 56, 159, 0.475);
     backdrop-filter: blur(5px);
-    display: flex;
+    display: none;
     align-items: center;
     justify-content: center;
     flex-direction: column;

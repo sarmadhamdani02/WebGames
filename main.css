@@ -18,3 +18,57 @@ body{
     height: 50px;
     background-color: rgb(0, 144, 144);
 }
+
+.main-content{
+    height: calc(100vh - 50px);
+    width: 100vw;
+    background-color: white;
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    flex-direction: row;
+    padding: 30px;
+}
+
+.main-content .game{
+    width: 20vw;
+    height: 25vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    /* background-color: pink; */
+    overflow: hidden;
+    gap: 40px;
+    border-radius: 20px;
+    border: 2px solid #555;
+    
+}
+
+.main-content .game:hover{
+    background-color: #dedede;
+}
+
+.game img{
+    width: 18vw;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 200ms;
+    
+}
+
+.game img:hover{
+    transform: scale(1.1);
+}
+
+.game a{
+    color: #222;
+    text-decoration: none;
+    
+}
+
+.game a:hover{
+    color: black;
+    text-decoration: underline;
+}

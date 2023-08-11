@@ -5,6 +5,7 @@ var scoreBox = document.querySelector(".score-box");
 var gameOverScreen = document.querySelector(".game-over-screen");
 var gameOverScore = document.querySelector(".game-over-screen .current-score");
 var retplayBtn = document.querySelector(".game-over-screen button");
+var startBtn = document.querySelector(".menu-screen button");
 
 var score = 0;
 
@@ -76,6 +77,16 @@ panelContent.addEventListener("click", (dets)=>{//Event bubbling
     }
 });
 
+startBtn.addEventListener("click", () => {
+
+    gsap.to(".menu-screen",{
+        scale:0
+    });
+    generateHit();
+    timeFunction();
+    bubbleMaker(panelContent);
+});
+
 retplayBtn.addEventListener("click", () => {
     score = 0;
     gameOverScreen.style.display = "none"
@@ -87,6 +98,4 @@ retplayBtn.addEventListener("click", () => {
 
 
 
-generateHit();
-timeFunction();
-bubbleMaker(panelContent);
+

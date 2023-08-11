@@ -30,6 +30,7 @@ body{
     justify-content: start;
     flex-direction: row;
     padding: 30px;
+    gap: 20px;
 }
 
 .main-content .game{
@@ -37,21 +38,24 @@ body{
     height: 25vw;
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between;
     flex-direction: column;
     /* background-color: pink; */
     overflow: hidden;
     gap: 40px;
     border-radius: 20px;
-    border: 2px solid #555;
+    border: 2px solid #009090;
+    padding: 10px 0;
     
 }
 
 .main-content .game:hover{
     background-color: #dedede;
+    border-color: #444444;
 }
 
 .game img{
+    background-size: cover;
     width: 18vw;
     margin-bottom: 20px;
     border-radius: 20px;
@@ -65,6 +69,8 @@ body{
 }
 
 .game a{
+    background-color: pink;
+    align-self: flex-end;
     color: #222;
     text-decoration: none;
     

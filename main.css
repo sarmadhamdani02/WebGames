@@ -69,7 +69,6 @@ body{
 }
 
 .game a{
-    background-color: pink;
     align-self: flex-end;
     color: #222;
     text-decoration: none;

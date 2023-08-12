@@ -50,6 +50,10 @@ body{
     text-transform: capitalize;
 }
 
+.fa-github{
+    
+}
+
 .main-content{
     overflow: hidden;
     height: calc(100vh - 50px);
@@ -59,24 +63,24 @@ body{
     align-items: start;
     justify-content: start;
     flex-direction: row;
-    padding: 30px;
+    flex-wrap: wrap;
     gap: 20px;
+    padding: 30px;  
 }
 
 .main-content .game{
-    width: 20vw;
-    height: 25vw;
+    text-align: center;
+    text-decoration: none;
     display: flex;
     align-items: center;
-    justify-content: space-between;
     flex-direction: column;
-    /* background-color: pink; */
     overflow: hidden;
-    gap: 40px;
     border-radius: 20px;
-    border: 2px solid #009090;
     padding: 10px 0;
-    
+    position: relative;
+    width: 14vw;
+    cursor: pointer;
+    overflow: hidden;
 }
 
 .main-content .game:hover{
@@ -84,11 +88,18 @@ body{
     border-color: #444444;
 }
 
+.main-content .game:hover img{
+    rotate: 3deg;
+    scale: 1.05;
+    outline: 1px solid #009090;
+}
+
 .game img{
     background-size: cover;
-    width: 18vw;
-    margin-bottom: 20px;
-    border-radius: 20px;
+    width: 10vw;
+    height: 10vw;
+    margin-bottom: 10px;
+    border-radius: 50%;
     cursor: pointer;
     transition: 200ms;
     
@@ -98,14 +109,16 @@ body{
     transform: scale(1.1);
 }
 
-.game a{
-    align-self: flex-end;
-    color: #222;
+.game h3{
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;    
+    color: #333333;
     text-decoration: none;
-    
 }
 
-.game a:hover{
-    color: black;
+.game h3:hover{
     text-decoration: underline;
+    color: #111111;
 }

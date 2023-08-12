@@ -51,7 +51,7 @@ body{
 }
 
 .fa-github{
-    
+
 }
 
 .main-content{
@@ -121,4 +121,41 @@ body{
 .game h3:hover{
     text-decoration: underline;
     color: #111111;
+}
+
+@media (max-width: 700px) {
+    
+    .nav-bar{
+        text-align: center;
+        justify-content: space-between;
+    }
+
+    .nav-bar h1{
+        font-size: 5vw;
+        margin-left: 0;
+    }
+    
+    .nav-bar button{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .nav-bar button .a-text{
+        display: none;
+    }
+
+    .main-content{
+        gap: 10vw;
+    }
+
+    .main-content .game{
+        width: 30vw;
+    }
+
+    .game img{
+        height: 25vw;
+        width: 25vw;
+    }
+
 }

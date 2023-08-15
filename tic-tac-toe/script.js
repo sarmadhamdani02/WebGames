@@ -455,11 +455,13 @@ function check() {
       panel[4].innerText == panel[6].innerText)
   ) {
     console.log("same");
+    document.getElementById("win-msg").hidden = false;
+    document.getElementById("draw-msg").hidden = true;
     return false;
   } else if (count == 8) {
     winScreen.style.display = "flex";
-    document.querySelector(".win-screen h1").style.color = "yellow";
-    document.querySelector(".win-screen h1").innerText = "Game Drawn";
+    document.getElementById("draw-msg").hidden = false;
+    document.getElementById("win-msg").hidden = true;
   } else {
     console.log("not");
     return true;

@@ -454,7 +454,6 @@ function check() {
       panel[2].innerText == panel[4].innerText &&
       panel[4].innerText == panel[6].innerText)
   ) {
-    console.log("same");
     document.getElementById("win-msg").hidden = false;
     document.getElementById("draw-msg").hidden = true;
     return false;
@@ -463,7 +462,6 @@ function check() {
     document.getElementById("draw-msg").hidden = false;
     document.getElementById("win-msg").hidden = true;
   } else {
-    console.log("not");
     return true;
   }
 }

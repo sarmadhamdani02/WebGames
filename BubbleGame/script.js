@@ -1,3 +1,13 @@
+
+gsap.from(".menu-screen .main-instruction",{
+    delay:0.2,
+    // x:-200,
+    // scale:0,
+    rotate:-45,
+    opacity:0,
+    duration: 0.3,
+})
+
 var panelContent = document.querySelector(".panel-content");
 var timerBox = document.querySelector(".timer-box");
 var hitBox = document.querySelector(".hit-box");
@@ -35,7 +45,7 @@ function gameOver() {
     gameOverScore.innerHTML = score;
 }
 
-var time = 60;
+var time = 2;
 timerBox.innerHTML = time;
 function timeFunction() {
     var timerInterval = setInterval(() => {
@@ -66,7 +76,7 @@ panelContent.addEventListener("click", (dets)=>{//Event bubbling
         bubbleMaker(panelContent);
     }
     else{
-        score -= 5;
+        score -= 10;
         scoreBox.innerHTML = score;
         if (score < 0) {
             scoreBox.style.color = "red";

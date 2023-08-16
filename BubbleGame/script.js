@@ -16,6 +16,7 @@ var gameOverScreen = document.querySelector(".game-over-screen");
 var gameOverScore = document.querySelector(".game-over-screen .current-score");
 var retplayBtn = document.querySelector(".game-over-screen button");
 var startBtn = document.querySelector(".menu-screen button");
+var highScoreDisplay = document.querySelector(".game-over-screen .high-score");
 
 var score = 0;
 
@@ -43,6 +44,22 @@ function gameOver() {
         duration:0.3
     });
     gameOverScore.innerHTML = score;
+    if (score > getHighScore())
+    {
+        setHighScore(score);
+    }
+    highScoreDisplay.innerHTML = getHighScore();
+}
+
+function setHighScore(score) {
+    document.cookie = "highScore=" + score + ";path=/";
+}
+function getHighScore() {
+    if (document.cookie == "") {
+        return 0;
+    } else {
+        return document.cookie.split("=")[1];
+    }
 }
 
 var time = 60;

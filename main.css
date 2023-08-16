@@ -16,25 +16,21 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 100vw; */
     height: 50px;
     background-color: rgb(0, 144, 144);
 }
 
 .nav-bar h1{
-    margin-left: 38vw;
     cursor: pointer;
     user-select: none;
 }
 
 .nav-bar .nav-elem{
-    margin-left: 17vw;
+    margin-left: 55vw;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
-    justify-self: flex-end;
-
 }
 
 .nav-bar .nav-elem button{

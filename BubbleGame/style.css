@@ -199,7 +199,11 @@ body{
     font-size: 40px;
     font-family: 'Arvo', serif;
 }
-
+.game-over-screen h3 .high-score{
+    color: #ffffff;
+    font-size: 40px;
+    font-family: 'Arvo', serif;
+}
 .game-over-screen button{
     font-family: 'Chakra Petch', sans-serif;
     font-weight: 999;

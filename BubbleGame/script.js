@@ -1,3 +1,13 @@
+
+gsap.from(".menu-screen .main-instruction",{
+    delay:0.2,
+    // x:-200,
+    // scale:0,
+    rotate:-45,
+    opacity:0,
+    duration: 0.3,
+})
+
 var panelContent = document.querySelector(".panel-content");
 var timerBox = document.querySelector(".timer-box");
 var hitBox = document.querySelector(".hit-box");
@@ -6,6 +16,7 @@ var gameOverScreen = document.querySelector(".game-over-screen");
 var gameOverScore = document.querySelector(".game-over-screen .current-score");
 var retplayBtn = document.querySelector(".game-over-screen button");
 var startBtn = document.querySelector(".menu-screen button");
+var highScoreDisplay = document.querySelector(".game-over-screen .high-score");
 
 var score = 0;
 
@@ -33,6 +44,22 @@ function gameOver() {
         duration:0.3
     });
     gameOverScore.innerHTML = score;
+    if (score > getHighScore())
+    {
+        setHighScore(score);
+    }
+    highScoreDisplay.innerHTML = getHighScore();
+}
+
+function setHighScore(score) {
+    document.cookie = "highScore=" + score + ";path=/";
+}
+function getHighScore() {
+    if (document.cookie == "") {
+        return 0;
+    } else {
+        return document.cookie.split("=")[1];
+    }
 }
 
 var time = 60;
@@ -66,7 +93,7 @@ panelContent.addEventListener("click", (dets)=>{//Event bubbling
         bubbleMaker(panelContent);
     }
     else{
-        score -= 5;
+        score -= 10;
         scoreBox.innerHTML = score;
         if (score < 0) {
             scoreBox.style.color = "red";

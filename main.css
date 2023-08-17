@@ -16,20 +16,21 @@ body{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    /* width: 100vw; */
     height: 50px;
     background-color: rgb(0, 144, 144);
 }
 
 .nav-bar h1{
-    margin-left: 38vw;
     cursor: pointer;
     user-select: none;
 }
 
 .nav-bar .nav-elem{
-    justify-self: flex-end;
-
+    margin-left: 55vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: nowrap;
 }
 
 .nav-bar .nav-elem button{
@@ -124,6 +125,10 @@ body{
 }
 
 @media (max-width: 700px) {
+
+    body{
+        overflow-x: hidden;
+    }
     
     .nav-bar{
         text-align: center;
@@ -135,15 +140,25 @@ body{
         margin-left: 0;
     }
     
-    .nav-bar button{
+    .nav-bar .nav-elem{
+        margin-left: 13vw;
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .nav-bar button{
+        font-size: 4vw;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
     }
     
     .nav-bar button .a-text{
         display: none;
     }
+
 
     .main-content{
         gap: 10vw;

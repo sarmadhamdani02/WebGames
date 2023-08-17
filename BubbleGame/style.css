@@ -42,6 +42,7 @@ body{
     align-items: center;
     justify-content: center;
     gap: 10px;
+    font-family: 'Chakra Petch', sans-serif;
 
 }
 
@@ -51,7 +52,8 @@ body{
     display: flex;
     padding: 5px 8px;
     border-radius: 3px;
-    font-weight: 700;
+    font-family: 'Arvo', serif;
+
 }
 
 .panel-content{
@@ -65,6 +67,8 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: 'Arvo', serif;
+
     
 }
 
@@ -94,18 +98,64 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    flex-direction: column;
+    gap: 80px;
+}
+
+
+.menu-screen .main-instruction {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    background-color: rgba(255, 255, 255, 0.30);
+    background-color: #ffffff30; /* Hexadecimal notation */
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    padding: 40px 50px;
+    border-radius: 30px;
+    overflow: hidden;
+}
+
+
+.menu-screen .main-instruction h1{
+    font-family: 'Chakra Petch', sans-serif;
+    text-transform: uppercase;
+    font-size: 3vw;
+    color: #211594;
+}
+
+.main-instruction ul li::before {
+    font-size: 25px;
+    content: "\2022";
+    color: #211594;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+  }
+
+.menu-screen .main-instruction ul{
+    list-style: none;
+    font-family: 'Bricolage Grotesque', sans-serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    font-size: 1.4vw;
+    color: #211594;
 }
 
 .menu-screen button{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 999;
     cursor: pointer;
     user-select: none;
-    font-size: 30px;
+    font-size: 3vw;
     background-color: #1c29df;
     color: white;
     border-radius: 10px;
     border: 2px solid black;
-    padding: 10px 20px;
+    padding: 8px 18px;
 
 }
 
@@ -131,8 +181,9 @@ body{
 .game-over-screen h1{
     text-transform: uppercase;
     color: #ffffff;
-    font-size: 777;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 999;
+    font-size: 3vw;
+    font-family: 'Arvo', serif;
 }
 
 .game-over-screen h3{
@@ -140,22 +191,30 @@ body{
     align-items: center;
     justify-content: center;
     text-transform: capitalize;
+    font-family: 'Bricolage Grotesque', sans-serif;
 }
 
 .game-over-screen h3 .current-score{
     color: #ffffff;
     font-size: 40px;
+    font-family: 'Arvo', serif;
 }
-
+.game-over-screen h3 .high-score{
+    color: #ffffff;
+    font-size: 40px;
+    font-family: 'Arvo', serif;
+}
 .game-over-screen button{
-    background-color: transparent;
-    background-color: rgb(28, 76, 223);
-    font-size: 20px;
-    border: 2px solid #000000;
-    border-radius: 30px;
-    padding: 10px 40px;
-    color: white;
+    font-family: 'Chakra Petch', sans-serif;
+    font-weight: 999;
     cursor: pointer;
+    user-select: none;
+    font-size: 2vw;
+    background-color: #1c29df;
+    color: white;
+    border-radius: 10px;
+    border: 2px solid black;
+    padding: 8px 18px;
 }
 
 .game-over-screen button:hover{

@@ -2,7 +2,13 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" href="/assets/the_bubble_game.png">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- adding google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arvo&family=Bricolage+Grotesque:opsz@10..48&family=Chakra+Petch:wght@400;700&family=Tilt+Prism&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="style.css" />
 
@@ -14,13 +20,30 @@
   <body>
 
     <div class="menu-screen">
-        <button>START</button>
+
+      <div class="main-instruction">
+        <h1>Instructions:</h1>
+        <h4>
+          <ul>
+            <li>You have 60 seconds to play the game.</li>
+            <li>A number is displayed in the Hit Panel for reference.</li>
+            <li>Bubbles with random numbers will be present in the Bubble Area.</li>
+            <li>Your task is to hit the bubble with the same number as displayed in the Hit Panel.</li>
+            <li>Successful match: +10 points are awarded.</li>
+            <li>Unsuccessful match: -10 points are deducted.</li>
+            <li>Bubbles' numbers change after each hit.</li>
+            <li>Try to score as many points as possible within the time limit.</li>
+          </ul>
+        </h4>
+      </div>
+      <button>START</button>
     </div>
 
       <div class="game-over-screen">
         <h1>game over</h1>
         <h3>your score:&nbsp<span class="current-score">0</span></h3>
-        <button>REPLAY</button>
+        <h3>High score:&nbsp<span class="high-score">0</span></h3>
+        <button>PLAY AGAIN</button>
     </div>
     <div class="main">
       <div class="main-panel">

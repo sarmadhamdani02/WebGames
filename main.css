@@ -1,176 +1,305 @@
+/* CSS Reset  */
 
-* {
-    margin: 0;
-    padding: 0;
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: sans-serif;
-    overflow: hidden;
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
 }
 
-.nav-bar{
-    padding: 0 4vw;
-    font-family: 'Press Start 2P', cursive;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 50px;
-    background-color: rgb(0, 144, 144);
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
 }
 
-.nav-bar h1{
-    cursor: pointer;
-    user-select: none;
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
 }
 
-.nav-bar .nav-elem{
-    margin-left: 55vw;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    flex-wrap: nowrap;
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
 }
 
-.nav-bar .nav-elem button{
-    background-color: transparent;
-    padding: 10px 20px;
-    border: none;
-    cursor: pointer;
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
 }
 
-.nav-bar .nav-elem button:hover{
-    background-color: rgba(255, 255, 255, 0.101);
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
 }
 
-.nav-bar .nav-elem button a{
-    color: white;
-    font-size: 20px;
-    text-decoration: none;
-    text-transform: capitalize;
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
 }
 
-.fa-github{
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
 
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }
 
-.main-content{
-    overflow: hidden;
-    height: calc(100vh - 50px);
-    width: 100vw;
-    background-color: white;
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    flex-direction: row;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 30px;  
+/* Utility Classes  */
+.svg-width {
+  width: 1.5rem;
+  height: 1.5rem;
 }
 
-.main-content .game{
-    text-align: center;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
+@media (min-width: 768px) {
+  .hidden {
+    display: none;
+  }
+}
+
+/* General Styling  */
+body {
+  font-family: "Roboto", sans-serif;
+}
+
+/* Nav Bar  */
+.nav-bar {
+  display: flex;
+  padding: 1rem;
+  color: white;
+  max-width: 1440px;
+  align-items: center;
+  margin-inline: auto;
+  justify-content: space-between;
+  background-color: rgb(0, 144, 144);
+}
+
+.nav-title {
+  cursor: default;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+
+  font-family: "Press Start 2P", cursive;
+}
+
+/* Nav Element  */
+.nav-element {
+  gap: 1rem;
+  display: flex;
+  list-style: none;
+  align-items: center;
+}
+
+.nav-element > li > a {
+  text-decoration: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  border-radius: 100vmax;
+  font-size: 1.25rem;
+  font-weight: 500;
+  transition: all 250ms ease;
+  backdrop-filter: blur(12px);
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.nav-element > li {
+  align-self: flex-start;
+}
+.nav-element > li > a:hover {
+  scale: 1.05;
+  translate: 0 -5px;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+}
+.nav-element > li > a:active {
+  scale: 0.98;
+  background: rgba(255, 255, 255, 0.4);
+}
+
+/* Hamburger Menu  */
+@media (max-width: 768px) {
+  .nav-element {
+    top: 0;
+    opacity: 0;
+    width: 80%;
+    z-index: 10;
+    right: -320px;
+    height: 100%;
+    position: fixed;
+    max-width: 350px;
+    visibility: hidden;
+    padding-inline: 2rem;
     flex-direction: column;
-    overflow: hidden;
-    border-radius: 20px;
-    padding: 10px 0;
-    position: relative;
-    width: 14vw;
-    cursor: pointer;
-    overflow: hidden;
+    justify-content: center;
+    transition: all 350ms ease;
+    background-color: rgb(0, 144, 144);
+    box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1),
+      0 4px 6px -4px rgb(0 0 0 / 0.1);
+  }
+  .show {
+    right: 0;
+    opacity: 1;
+    visibility: visible;
+    transition: all 500ms ease;
+  }
+
+  /* Open & Close Button  */
+  .menu-btn,
+  .close-btn {
+    width: 45px;
+    height: 45px;
+    border: none;
+    color: white;
+    display: grid;
+    place-content: center;
+    border-radius: 100vmax;
+    backdrop-filter: blur(12px);
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  }
+  .close-btn {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+  }
 }
 
-.main-content .game:hover{
-    background-color: #dedede;
-    border-color: #444444;
+/* Navbar Padding Adjustment  */
+@media (min-width: 768px) {
+  .nav-bar {
+    padding: 1rem 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .nav-bar {
+    padding: 1.25rem 5rem;
+  }
 }
 
-.main-content .game:hover img{
-    rotate: 3deg;
-    scale: 1.05;
-    outline: 1px solid #009090;
+/* Main Content  Untouched by @SameerJs6*/
+.main-content {
+  /* overflow: hidden; */
+  /* height: calc(100vh - 50px); */
+  /* width: 100vw; */
+  background-color: white;
+  display: flex;
+  /* align-items: start; */
+  /* justify-content: start; */
+  /* flex-direction: row; */
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 2rem;
 }
 
-.game img{
-    background-size: cover;
-    width: 10vw;
-    height: 10vw;
-    margin-bottom: 10px;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 200ms;
-    
+.main-content .game {
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  overflow: hidden;
+  border-radius: 20px;
+  padding: 1rem;
+  position: relative;
+  /* width: 14vw; */
+  cursor: pointer;
+  overflow: hidden;
 }
 
-.game img:hover{
-    transform: scale(1.1);
+.main-content .game:hover {
+  background-color: #dedede;
+  border-color: #444444;
 }
 
-.game h3{
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;    
-    color: #333333;
-    text-decoration: none;
+.main-content .game:hover img {
+  rotate: 3deg;
+  scale: 1.05;
+  outline: 1px solid #009090;
+}
+.main-content .game:hover h3 {
+  translate: 0 5px;
 }
 
-.game h3:hover{
-    text-decoration: underline;
-    color: #111111;
+.game img {
+  background-size: cover;
+  /* width: 10vw;
+    height: 10vw; */
+  max-width: 150px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 200ms;
+}
+
+.game img:hover {
+  transform: scale(1.1);
+}
+
+.game h3 {
+  font-size: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #333333;
+  text-decoration: none;
+  padding-block-start: 0.5rem;
+  transition: translate 250ms ease-in-out;
+}
+
+.game h3:hover {
+  text-decoration: underline;
+  color: #111111;
 }
 
 @media (max-width: 700px) {
+  .main-content {
+    gap: 10vw;
+  }
 
-    body{
-        overflow-x: hidden;
-    }
-    
-    .nav-bar{
-        text-align: center;
-        justify-content: space-between;
-    }
+  .main-content .game {
+    width: 30vw;
+  }
 
-    .nav-bar h1{
-        font-size: 5vw;
-        margin-left: 0;
-    }
-    
-    .nav-bar .nav-elem{
-        margin-left: 13vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .nav-bar button{
-        font-size: 4vw;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-
-    }
-    
-    .nav-bar button .a-text{
-        display: none;
-    }
-
-
-    .main-content{
-        gap: 10vw;
-    }
-
-    .main-content .game{
-        width: 30vw;
-    }
-
-    .game img{
-        height: 25vw;
-        width: 25vw;
-    }
-
+  .game img {
+    height: 25vw;
+    width: 25vw;
+  }
 }

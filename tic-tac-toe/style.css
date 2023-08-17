@@ -160,7 +160,7 @@ body{
 }
 
 .game-container{
-    background-color: royalblue;
+    background-color: rgb(65, 105, 225);
     backdrop-filter: blur(5px);
     border: 2px solid rgb(208, 219, 255);
     border-radius: 30px;
@@ -184,7 +184,7 @@ body{
     color: transparent;
     font-weight: 999;
     font-size: 7vw;
-    -webkit-text-stroke: 2px rgb(126, 158, 255);
+    -webkit-text-stroke: 2px rgba(255, 255, 255, 0.664);
 }
 
 .game-panel:hover{

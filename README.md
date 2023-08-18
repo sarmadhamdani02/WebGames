@@ -26,10 +26,10 @@ Not sure how things work. Here are some steps for you:
 
 * **Clone** your forked repository to your local machine.
 
-* **Make your changes**, additions, or fixes.
+* **Make your changes**, additions or fixes.
 
 * **Commit and push** your changes to your forked repository.
 
 * Submit a **pull request** to have your changes reviewed and merged into the main repository.
 
-* Try using HTML, CSS and Javascript (and any library of Javascript) only, as this repository is basically focussing on the skill development fro beginners.
+* Try using HTML, CSS and Javascript (and any library of Javascript) only, as this repository is basically focusing on the skill development for beginners.

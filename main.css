@@ -131,10 +131,11 @@ body {
   display: flex;
   align-items: center;
   gap: 0.5rem;
-  padding: 0.75rem 1.25rem;
+  padding: 0.6rem 1.25rem;
   border-radius: 100vmax;
-  font-size: 1.25rem;
+  font-size: 1rem;
   font-weight: 500;
+  letter-spacing: 0.05rem;
   transition: all 250ms ease;
   backdrop-filter: blur(12px);
   background: rgba(255, 255, 255, 0.15);
@@ -205,12 +206,12 @@ body {
 /* Navbar Padding Adjustment  */
 @media (min-width: 768px) {
   .nav-bar {
-    padding: 1rem 3rem;
+    padding: 0.9rem 3rem;
   }
 }
 @media (min-width: 1024px) {
   .nav-bar {
-    padding: 1.25rem 5rem;
+    padding: 0.9rem 5rem;
   }
 }
 

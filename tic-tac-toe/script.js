@@ -494,7 +494,7 @@ function layoutColor(backgroundColor) {
 
     targetGamePanel.forEach(function (elem) {
       elem.addEventListener("click", () => {
-        elem.style.webkitTextStrokeColor = "#EADBC8";
+        elem.style.webkitTextStrokeColor = "white";
       });
     });
   } else if (backgroundColor === "lightcoral") {
@@ -517,7 +517,7 @@ function layoutColor(backgroundColor) {
 
     targetGamePanel.forEach(function (elem) {
       elem.addEventListener("click", () => {
-        elem.style.webkitTextStrokeColor = "#EADBC8";
+        elem.style.webkitTextStrokeColor = "white";
       });
     });
   } else if (backgroundColor === "rgb(141, 114, 225)") {
@@ -540,7 +540,7 @@ function layoutColor(backgroundColor) {
 
     targetGamePanel.forEach(function (elem) {
       elem.addEventListener("click", () => {
-        elem.style.webkitTextStrokeColor = "#EADBC8";
+        elem.style.webkitTextStrokeColor = "white";
       });
     });
   }else if(backgroundColor === "rgb(95, 135, 255)"){
@@ -563,7 +563,7 @@ function layoutColor(backgroundColor) {
 
     targetGamePanel.forEach(function (elem) {
       elem.addEventListener("click", () => {
-        elem.style.webkitTextStrokeColor = "#EADBC8";
+        elem.style.webkitTextStrokeColor = "white";
       });
     });
   }

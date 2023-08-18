@@ -479,7 +479,7 @@ function layoutColor(backgroundColor) {
     targetGameContainer.style.backgroundColor = "#61678A";
 
     targetGamePanel.forEach(function (elem) {
-      elem.style.borderColor = "#D5CEA3";
+      elem.style.borderColor = "white";
     });
     // targeting the individual box for hover
     targetGamePanel.forEach((elem) => {

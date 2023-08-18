@@ -177,7 +177,7 @@ body{
     align-items: center;
     justify-content: center;
     background-color: transparent;
-    border: 1px solid rgb(126, 158, 255);
+    border: 1px solid white;
     height: 23.33vh;
     width: 11.55vw;
     cursor: pointer;

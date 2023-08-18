@@ -1,6 +1,8 @@
 
 # Welcome to WebGames Repository
 
+![web-page](assets/page_icon.png)
+
 The WebGames repository is a collaborative project aimed at creating a diverse collection of web-based games while having a supportive environment for both new and experienced developers. By participating in this open-source initiative, you can contribute to the world of game and web development, improve your logical thinking, and create enjoyable experiences for users across the globe.
 ## Why WebGames?
 

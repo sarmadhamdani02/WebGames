@@ -12,23 +12,21 @@ var turnName = document.querySelector(".main h1 .player");
 var winScreen = document.querySelector(".win-screen");
 var panel = document.getElementsByClassName("game-panel");
 
-
 var tl = gsap.timeline();
 
-gsap.from(".title-screen .title, .win-screen h1",{
-    y : 6,
-    repeat:-1,
-    yoyo:true,
-    ease:"power1"
-})
+gsap.from(".title-screen .title, .win-screen h1", {
+  y: 6,
+  repeat: -1,
+  yoyo: true,
+  ease: "power1",
+});
 
-gsap.from(".player",{
-    
-    repeat:-1,
-    yoyo:true,
-    duration:2,
-    ease:"linear"
-})
+gsap.from(".player", {
+  repeat: -1,
+  yoyo: true,
+  duration: 2,
+  ease: "linear",
+});
 
 startBtn.addEventListener("click", function () {
   turnHead.style.display = "flex";
@@ -55,12 +53,11 @@ panel[0].addEventListener("click", () => {
       panel[0].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -69,12 +66,11 @@ panel[0].addEventListener("click", () => {
     panel[0].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -94,12 +90,11 @@ panel[1].addEventListener("click", () => {
       panel[1].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -108,12 +103,11 @@ panel[1].addEventListener("click", () => {
     panel[1].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -133,12 +127,11 @@ panel[2].addEventListener("click", () => {
       panel[2].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -147,12 +140,11 @@ panel[2].addEventListener("click", () => {
     panel[2].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -172,12 +164,11 @@ panel[3].addEventListener("click", () => {
       panel[3].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -186,12 +177,11 @@ panel[3].addEventListener("click", () => {
     panel[3].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -211,12 +201,11 @@ panel[4].addEventListener("click", () => {
       panel[4].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -225,12 +214,11 @@ panel[4].addEventListener("click", () => {
     panel[4].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -250,12 +238,11 @@ panel[5].addEventListener("click", () => {
       panel[5].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -264,12 +251,11 @@ panel[5].addEventListener("click", () => {
     panel[5].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -289,12 +275,11 @@ panel[6].addEventListener("click", () => {
       panel[6].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -303,12 +288,11 @@ panel[6].addEventListener("click", () => {
     panel[6].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -328,12 +312,11 @@ panel[7].addEventListener("click", () => {
       panel[7].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -342,12 +325,11 @@ panel[7].addEventListener("click", () => {
     panel[7].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -367,12 +349,11 @@ panel[8].addEventListener("click", () => {
       panel[8].style.pointerEvents = "none";
 
       if (!check()) {
-          winnerName.innerHTML = "O";
-          winScreen.style.display = "flex";
+        winnerName.innerHTML = "O";
+        winScreen.style.display = "flex";
         gsap.to(".win-screen", {
           y: "0",
         });
-
       }
     }
     turnName.innerHTML = "X";
@@ -381,12 +362,11 @@ panel[8].addEventListener("click", () => {
     panel[8].style.pointerEvents = "none";
 
     if (!check()) {
-        winnerName.innerHTML = "X";
-        winScreen.style.display = "flex";
+      winnerName.innerHTML = "X";
+      winScreen.style.display = "flex";
       gsap.to(".win-screen", {
         y: "0",
       });
-
     }
 
     turnName.innerHTML = "O";
@@ -396,19 +376,19 @@ panel[8].addEventListener("click", () => {
 });
 
 restartBtn.addEventListener("click", () => {
-    gsap.to(".win-screen", {
-        y: "-100vh",
-    });
-    
-    for (let i = 0; i < panel.length; i++) {
-        panel[i].innerText = "";
-        panel[i].style.pointerEvents = "all";
-        firstTurn = true;
-        count = 0;
-        turn = 0;
-        fill = 0;
-    }
-    turnName.innerText = "O";
+  gsap.to(".win-screen", {
+    y: "-100vh",
+  });
+
+  for (let i = 0; i < panel.length; i++) {
+    panel[i].innerText = "";
+    panel[i].style.pointerEvents = "all";
+    firstTurn = true;
+    count = 0;
+    turn = 0;
+    fill = 0;
+  }
+  turnName.innerText = "O";
 });
 
 function check() {
@@ -465,3 +445,131 @@ function check() {
     return true;
   }
 }
+
+function randomColor() {
+  // random color for the better user experience.
+  let randomBackgroundColor = [
+    "#474E68",
+    "lightCoral",
+    "#8D72E1",
+    "rgb(95, 135, 255)",
+  ];
+
+  // random number to get the random color as desired
+  let randomNumber = Math.floor(Math.random() * 4);
+
+  // target the main container
+  let targetMain = document.querySelector(".main");
+
+  targetMain.style.backgroundColor = randomBackgroundColor[randomNumber];
+
+  //method for the entire layout of the game according to the main background color
+  layoutColor(targetMain.style.backgroundColor);
+}
+
+// first targeting all the necessary points.
+let targetGameContainer = document.querySelector(".game-container");
+let targetGamePanel = Array.from(document.querySelectorAll(".game-panel"));
+
+// layoutColor sets the layout color in the synchronous format to make the theme color ideal
+function layoutColor(backgroundColor) {
+  console.log(backgroundColor);
+  if (backgroundColor === "rgb(71, 78, 104)") {
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "#61678A";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "#252B48";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  } else if (backgroundColor === "lightcoral") {
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "#E48586";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "#FCBAAD";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  } else if (backgroundColor === "rgb(141, 114, 225)") {
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "#A66CFF";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "#C9A7EB";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }else if(backgroundColor === "rgb(95, 135, 255)"){
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "rgb(65, 105, 225)";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "rgb(28, 78, 228)";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }
+}
+
+// targeting the restart-button.
+restartBtn.addEventListener("click", randomColor);
+
+

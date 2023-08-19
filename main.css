@@ -133,6 +133,7 @@ body{
     align-items: center;
     justify-content: center;
     flex-wrap: nowrap;
+    padding-left: 10px;
 }
 
 .switch {

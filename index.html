@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="main.css">
 
+    <script defer src="script.js"></script>
     <title>Web Games</title>
 </head>
 <body>
@@ -20,19 +21,19 @@
         <h1>Web Games</h1>
         <div class="nav-elem">
             <button>
-                <a class="a-text" href="https://github.com/sarmadhamdani02/webGames" target="_blank">contribute&nbsp;</a>
-                <a href="https://github.com/sarmadhamdani02/webGames" target="_blank"><i class="fa-brands fa-github"></i></a>
+                <a class="a-text nav-item" href="https://github.com/sarmadhamdani02/webGames" target="_blank">contribute&nbsp;</a>
+                <a href="https://github.com/sarmadhamdani02/webGames" target="_blank"><i class="fa-brands fa-github nav-item"></i></a>
             </button>
             
             <button>
-                <a class="a-text" href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank">About&nbsp;</a>
-                <a href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank"><i class="fa-solid fa-circle-info"></i><a>
+                <a class="a-text nav-item" href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank">About&nbsp;</a>
+                <a href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank"><i class="fa-solid fa-circle-info nav-item"></i><a>
             </button>
 
             <div id="dark-mode">
-                <p>Dark Mode</p>
+                <p class="nav-item">Dark Mode</p>
                 <label class="switch">
-                    <input type="checkbox" ><span class="slider round"></span>
+                    <input type="checkbox" id="toggle" onclick="onToggleDarkMode()"><span class="slider"></span>
                 </label>
             </div>
         </div>

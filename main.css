@@ -85,8 +85,11 @@ body{
     overflow: hidden;
 }
 
+:root {
+    --background-color: #dedede;
+}
 .main-content .game:hover{
-    background-color: #dedede;
+    background-color: var(--background-color);
     border-color: #444444;
 }
 

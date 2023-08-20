@@ -3,24 +3,31 @@ const mainContent = document.getElementsByClassName("main-content");
 const navBar = document.getElementsByClassName("nav-bar");
 const gameText = document.getElementsByClassName("game-text");
 const navItem = document.getElementsByClassName("nav-item");
+const gameIcon = document.getElementsByClassName("game");
 
 const onToggleDarkMode = () => {
   if(toggleSwitch.checked == true) {
-    mainContent[0].style.backgroundColor = "#121212";
+    mainContent[0].style.backgroundColor = "#15202B";
     for(let i = 0; i < gameText.length; i++) {
-        gameText[i].style.color = "white";
+        gameText[i].style.color = "#E4E6EB";
+    }
+    for(let i = 0; i < gameIcon.length; i++) {
+      gameIcon[i].style.setProperty("--background-color", "#22303C");
     }
 
-    navBar[0].style.backgroundColor = "yellow";
-    navBar[0].style.color = "black";
+    navBar[0].style.backgroundColor = "#03DAC5";
+    navBar[0].style.color = "#121212";
     for(let i = 0; i < navItem.length; i++) {
-        navItem[i].style.color = "black";
+        navItem[i].style.color = "#121212";
     }
   }
   else {
     mainContent[0].style.backgroundColor = "white";
     for(let i = 0; i < gameText.length; i++) {
         gameText[i].style.color = "#333333";
+    }
+    for(let i = 0; i < gameIcon.length; i++) {
+      gameIcon[i].style.setProperty("--background-color", "#dedede");
     }
 
     navBar[0].style.backgroundColor = "#009090";

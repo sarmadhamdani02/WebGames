@@ -146,24 +146,6 @@ body{
     color: #211594;
 }
 
-/* .menu-screen button{
-    font-family: 'Chakra Petch', sans-serif;
-    font-weight: 999;
-    cursor: pointer;
-    user-select: none;
-    font-size: 3vw;
-    background-color: #1c29df;
-    color: white;
-    border-radius: 10px;
-    border: 2px solid black;
-    padding: 8px 18px;
-
-}
-
-.menu-screen button:hover{
-    border-color: white;
-} */
-
 .game-over-screen{
     height: 100vh;
     width: 100vw;
@@ -206,7 +188,6 @@ body{
     font-family: 'Arvo', serif;
 }
 .video-game-button {
-    width: 160px;
     cursor: pointer;
     outline: none;
     border: 0;

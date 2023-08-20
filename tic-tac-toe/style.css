@@ -97,13 +97,14 @@ body{
 }
 
 .btn-div{
-    margin-top: 60vh;
+    margin-top: 48vh;
     display: flex;
     align-items: center;
     justify-content: center;
+    
 }
 .video-game-button {
-    width: 165px;
+    
     cursor: pointer;
     outline: none;
     border: 0;

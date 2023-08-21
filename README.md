@@ -1,6 +1,8 @@
 
 # Welcome to WebGames Repository
 
+![web-page](assets/page_icon.png)
+
 The WebGames repository is a collaborative project aimed at creating a diverse collection of web-based games while having a supportive environment for both new and experienced developers. By participating in this open-source initiative, you can contribute to the world of game and web development, improve your logical thinking, and create enjoyable experiences for users across the globe.
 ## Why WebGames?
 
@@ -26,10 +28,10 @@ Not sure how things work. Here are some steps for you:
 
 * **Clone** your forked repository to your local machine.
 
-* **Make your changes**, additions, or fixes.
+* **Make your changes**, additions or fixes.
 
 * **Commit and push** your changes to your forked repository.
 
 * Submit a **pull request** to have your changes reviewed and merged into the main repository.
 
-* Try using HTML, CSS and Javascript (and any library of Javascript) only, as this repository is basically focussing on the skill development fro beginners.
+* Try using HTML, CSS and Javascript (and any library of Javascript) only, as this repository is basically focusing on the skill development for beginners.

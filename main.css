@@ -21,10 +21,17 @@ body{
     white-space: nowrap;
 }
 
-.nav-bar h1{
+.nav-bar a{
+    color: white;
+    text-decoration: none;
+
+}
+
+.nav-bar .logo{
     cursor: pointer;
     user-select: none;
 }
+
 
 .nav-bar .nav-elem{
     margin-left: 45vw;

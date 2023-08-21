@@ -1,3 +1,6 @@
+:root {
+    --game-icon-hover-color: #dedede;
+}
 
 * {
     margin: 0;
@@ -92,11 +95,8 @@ body{
     overflow: hidden;
 }
 
-:root {
-    --background-color: #dedede;
-}
 .main-content .game:hover{
-    background-color: var(--background-color);
+    background-color: var(--game-icon-hover-color);
     border-color: #444444;
 }
 

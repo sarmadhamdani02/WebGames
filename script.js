@@ -12,13 +12,13 @@ const onToggleDarkMode = () => {
         gameText[i].style.color = "#E4E6EB";
     }
     for(let i = 0; i < gameIcon.length; i++) {
-      gameIcon[i].style.setProperty("--background-color", "#22303C");
+      gameIcon[i].style.setProperty("--game-icon-hover-color", "#22303C");
     }
 
     navBar[0].style.backgroundColor = "#03DAC5";
-    navBar[0].style.color = "#121212";
+    navBar[0].style.color = "#212628";
     for(let i = 0; i < navItem.length; i++) {
-        navItem[i].style.color = "#121212";
+        navItem[i].style.color = "#212628";
     }
   }
   else {
@@ -27,7 +27,7 @@ const onToggleDarkMode = () => {
         gameText[i].style.color = "#333333";
     }
     for(let i = 0; i < gameIcon.length; i++) {
-      gameIcon[i].style.setProperty("--background-color", "#dedede");
+      gameIcon[i].style.setProperty("--game-icon-hover-color", "#dedede");
     }
 
     navBar[0].style.backgroundColor = "#009090";

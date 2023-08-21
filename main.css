@@ -97,9 +97,9 @@ body{
 }
 
 .main-content .game:hover img{
-    rotate: 3deg;
-    scale: 1.05;
-    outline: 1px solid #009090;
+    /* rotate: 3deg; */
+    scale: 1.10;
+    outline: 1.5px solid #009090;
 }
 
 .game img{
@@ -114,7 +114,9 @@ body{
 }
 
 .game img:hover{
-    transform: scale(1.1);
+    /* transform: scale(1.1); */
+    rotate: 8deg;
+
 }
 
 .game h3{

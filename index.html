@@ -16,25 +16,33 @@
     crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="main.css" />
 
-  <title>Web Games</title>
+    <script defer src="script.js"></script>
+    <title>Web Games</title>
 </head>
 
 <body>
   <nav class="nav-bar">
-    <a href="https://sarmadhamdani02.github.io/WebGames/" target="_blank"><h1>Web Games</h1></a>
+    <h1>Web Games</h1>
     <div class="nav-elem">
       <button>
-        <a class="a-text" href="https://github.com/sarmadhamdani02/webGames" target="_blank">contribute&nbsp;</a>
-        <a href="https://github.com/sarmadhamdani02/webGames" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a class="a-text nav-item" href="https://github.com/sarmadhamdani02/webGames" target="_blank">contribute&nbsp;</a>
+          <a href="https://github.com/sarmadhamdani02/webGames" target="_blank"><i class="fa-brands fa-github nav-item"></i></a>
+      </button>
+            
+      <button>
+          <a class="a-text nav-item" href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank">About&nbsp;</a>
+          <a href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank"><i class="fa-solid fa-circle-info nav-item"></i><a>
       </button>
 
-      <button>
-        <a class="a-text" href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank">About&nbsp;</a>
-        <a href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank"><i
-            class="fa-solid fa-circle-info"></i><a>
-      </button>
+      <div id="dark-mode">
+        <p class="nav-item">Dark Mode</p>
+        <label class="switch">
+          <input type="checkbox" id="toggle" onclick="onToggleDarkMode()"><span class="slider"></span>
+        </label>
+      </div>
     </div>
   </nav>
+
   <div class="main-content">
     <a href="tic-tac-toe/index.html" class="game game1" target="_blank">
       <img src="assets/tic-tac-toe.png" alt="">

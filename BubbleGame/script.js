@@ -116,13 +116,11 @@ startBtn.addEventListener("click", () => {
 
 retplayBtn.addEventListener("click", () => {
     score = 0;
+    scoreBox.innerHTML = score;
+    scoreBox.style.color = "rgb(28, 76, 223)";
     gameOverScreen.style.display = "none"
     generateHit();
     timeFunction();
     bubbleMaker(panelContent);
     time = 61;
 });
-
-
-
-

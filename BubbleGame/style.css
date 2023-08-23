@@ -109,8 +109,10 @@ body{
     justify-content: center;
     flex-direction: column;
     gap: 20px;
-    background-color: rgba(255, 255, 255, 0.30);
-    background-color: #ffffff30; /* Hexadecimal notation */
+    background-color: rgba(0, 181, 159, 1) !important; /*The color set to rgba(0, 181, 159, 1) provides good contrast. Phillip Andrews*/
+    /*Changed hexadecimal notation to match the rgba color. Also, I added !important after both background-colors so the desired 
+    background color takes precedence. Phillip Andrews*/
+    background-color: #00b59f !important; /* Hexadecimal notation */
     -webkit-backdrop-filter: blur(5px);
     backdrop-filter: blur(5px);
     padding: 40px 50px;

@@ -73,7 +73,7 @@ body{
 }
 
 .bubble{
-    background-color: #1c29df;
+    background-color: #add8e6;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -81,6 +81,7 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    animation: bubble-anim 1s infinite;
 }
 
 .bubble:hover{
@@ -252,4 +253,55 @@ body{
 
 .video-game-button:focus:not(:focus-visible) {
     outline: 0;
+}
+
+@-webkit-keyframes bubble-anim {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1); }
+
+    20% {
+        -webkit-transform: scaleY(0.95) scaleX(1.05);
+        transform: scaleY(0.95) scaleX(1.05); }
+
+    48% {
+        -webkit-transform: scaleY(1.1) scaleX(0.9);
+        transform: scaleY(1.1) scaleX(0.9); }
+
+    68% {
+        -webkit-transform: scaleY(0.98) scaleX(1.02);
+        transform: scaleY(0.98) scaleX(1.02); }
+
+    80% {
+        -webkit-transform: scaleY(1.02) scaleX(0.98);
+        transform: scaleY(1.02) scaleX(0.98); }
+
+    97%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1); } }
+
+@keyframes bubble-anim {
+    0% {
+        -webkit-transform: scale(1);
+        transform: scale(1); }
+
+    20% {
+        -webkit-transform: scaleY(0.95) scaleX(1.05);
+        transform: scaleY(0.95) scaleX(1.05); }
+
+    48% {
+        -webkit-transform: scaleY(1.1) scaleX(0.9);
+        transform: scaleY(1.1) scaleX(0.9); }
+
+    68% {
+        -webkit-transform: scaleY(0.98) scaleX(1.02);
+        transform: scaleY(0.98) scaleX(1.02); }
+
+    80% {
+        -webkit-transform: scaleY(1.02) scaleX(0.98);
+        transform: scaleY(1.02) scaleX(0.98); }
+
+    97%, 100% {
+        -webkit-transform: scale(1);
+        transform: scale(1); }
 }

@@ -73,7 +73,7 @@ body{
 }
 
 .bubble{
-    background-color: #add8e6;
+    background-color: #1c29df;
     width: 40px;
     height: 40px;
     border-radius: 50%;
@@ -81,7 +81,6 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    animation: bubble-anim 1s infinite;
 }
 
 .bubble:hover{

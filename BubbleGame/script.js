@@ -91,24 +91,25 @@ function generateHit() {
 }
 
 panelContent.addEventListener("click", (dets)=>{//Event bubbling
-    if(dets.target.innerHTML == hitBox.innerHTML){
-        score += 10;
-        scoreBox.innerHTML = score;
-        if (score >= 0) {
-            scoreBox.style.color = "rgb(28, 76, 223)";
+    if(dets.target.classList.contains('bubble')) {
+        if(dets.target.innerHTML == hitBox.innerHTML){
+            score += 10;
+            scoreBox.innerHTML = score;
+            if (score >= 0) {
+                scoreBox.style.color = "rgb(28, 76, 223)";
+            }
+            generateHit();
+            bubbleMaker(panelContent);
         }
-        generateHit();
-        bubbleMaker(panelContent);
-    }
-    else{
-        score -= 10;
-        scoreBox.innerHTML = score;
-        if (score < 0) {
-            scoreBox.style.color = "red";
+        else{
+            score -= 10;
+            scoreBox.innerHTML = score;
+            if (score < 0) {
+                scoreBox.style.color = "red";
+            }
+            generateHit();
+            bubbleMaker(panelContent);
         }
-        generateHit();
-        bubbleMaker(panelContent);
-
     }
 });
 

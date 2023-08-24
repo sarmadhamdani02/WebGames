@@ -1,0 +1,186 @@
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: sans-serif;
+}
+
+.main-screen,
+.game-screen,
+.question-panel,
+.option-panel,
+.score-panel{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-screen{
+    background-color: #1a1b26;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    flex-direction: column;
+    gap: 15vh;
+}
+
+.code,
+.string,
+.start-btn,
+.if-else,
+.function,
+.brackets{
+    font-family: 'Fira Code', monospace;
+}
+
+
+.if-else{
+    color: #db78a1;
+}
+
+.function{
+    color: #4def74;
+}
+
+.brackets{
+    color: #2c4f9e;
+}
+
+.colon, .code{
+    color: #5aceff;
+}
+
+.string{
+    color: #e9ef84;
+    font-size: 2.5vw;
+}
+
+.start-btn{
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 10px 25px;
+    border-radius: 30px;
+    color: white;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-size: 1.3vw;
+}
+
+.start-btn:hover{
+    color: #4def74;
+}
+
+.start-btn:hover .btn-brackets{
+    color: #2c4f9e;
+}
+
+.start-btn:hover .btn-colon{
+    color: #5aceff;
+}
+
+.start-btn:active{
+    border-color: #db78a1;
+}
+
+.read-instruction{
+    cursor: pointer;
+    user-select: none;
+}
+
+.read-instruction:hover{
+    text-shadow: #4def74 1px 0 10px;;
+}
+
+.read-instruction:hover .brackets{
+    text-shadow: #2c4f9e 1px 0 10px;;
+}
+
+.read-instruction:hover .colon{
+    text-shadow: #5aceff 1px 0 10px;;
+}
+
+.game-screen{
+    font-family: 'Nunito', sans-serif;
+    text-transform: capitalize;
+    color: white;
+    background-color: rgb(89, 14, 89);
+    height: 100vh;
+    width: 100vw;
+    flex-direction: column;
+}
+
+.game-screen .score-panel{
+    font-size: 2vw;
+    margin-left: 78vw;
+    display: flex;
+    gap: 5px;
+}
+
+.game-screen .score-panel .score{
+    font-size: 3vw;
+}
+
+
+.game-panel{
+    background-color: rgba(255, 255, 255, 0.100);
+    /* backdrop-filter: blur(5px); */
+    display: flex;
+    flex-direction: column;
+    height: 75vh;
+    width: 70vw;
+    border: 1px solid white;
+    border-radius: 10px;
+    gap: 80px;
+}
+
+.question-panel{
+    text-align: center;
+    margin-top: 50px;
+    color: white;
+    font-family: 'Slabo 13px', serif;
+    font-size: clamp(0.5rem, 1.2vw,5rem);
+}
+
+.option-panel{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.option-panel .options{
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    background-color: transparent;
+    border: 1px solid rgba(255, 255, 255, 0.800);
+    border-radius: 5px;
+    padding: 10px 60px;
+    color: white;
+    cursor: pointer;
+    word-wrap: nowrap;
+    font-size: clamp(1.1rem, 1.2vw,5rem);
+    min-width: 50vw;
+    text-transform: capitalize;
+}
+
+.options:hover{
+    background-color: rgba(255, 255, 255, 0.300);
+}
+
+.options:active{
+    background-color: transparent;
+}
+
+.right-option{
+    color: limegreen;
+    border: 1px solid limegreen;
+}
+
+.wrong-option{
+    color: crimson;
+    border: 1px solid crimson;
+}
+    

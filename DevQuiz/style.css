@@ -12,7 +12,9 @@ body{
 .game-screen,
 .question-panel,
 .option-panel,
-.score-panel{
+.score-panel,
+.game-end-panel,
+.result-panel{
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,10 +34,14 @@ body{
 .start-btn,
 .if-else,
 .function,
-.brackets{
+.brackets,
+.init{
     font-family: 'Fira Code', monospace;
 }
 
+.init{
+    color: #ac9af7;
+}
 
 .if-else{
     color: #db78a1;
@@ -138,6 +144,7 @@ body{
 }
 
 .question-panel{
+    padding: 0 10px;
     text-align: center;
     margin-top: 50px;
     color: white;
@@ -146,14 +153,16 @@ body{
 }
 
 .option-panel{
+    padding: 0 60px;
     display: flex;
     flex-direction: column;
-    gap: 5px;
+    gap: 8px;
+    margin-bottom: 20px;
 }
 
 .option-panel .options{
     text-align: center;
-    font-family: 'Nunito', sans-serif;
+    font-family: 'M PLUS 1 Code', sans-serif;
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.800);
     border-radius: 5px;
@@ -161,9 +170,9 @@ body{
     color: white;
     cursor: pointer;
     word-wrap: nowrap;
-    font-size: clamp(1.1rem, 1.2vw,5rem);
+    font-size: clamp(1.1rem, 1.35vw,5rem);
     min-width: 50vw;
-    text-transform: capitalize;
+    text-transform: lowercase;
 }
 
 .options:hover{
@@ -184,3 +193,19 @@ body{
     border: 1px solid crimson;
 }
     
+.game-end-panel{
+    position: absolute;
+    z-index: 10;
+    height: 100vh;
+    width: 100vw;
+    background-color: #1a1b26;
+    display: none;
+
+}
+
+.result-panel{
+    margin-top: 30px;
+    font-family: 'Nunito', sans-serif;
+    color: white;
+    flex-direction: column;
+}

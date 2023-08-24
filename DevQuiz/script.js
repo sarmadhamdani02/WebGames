@@ -10,12 +10,19 @@ const optionC = document.querySelector(".option-c");
 const optionD = document.querySelector(".option-d");
 const scoreSection = document.querySelector(".score"); 
 const gameScreen = document.querySelector(".game-screen");
+const gameEndPanel = document.querySelector(".game-end-panel");
+const gameScoreBox = document.querySelector(".score-box");
+const totalScoreBox = document.querySelector(".total-score");
+const percentBox = document.querySelector(".percent");
+const remarkEmoji = document.querySelector(".remark-emoji");
 
 let questionIndex = 0;
 
 let questionsAsked = []; //all the asked questions will be entered in this array so they will never repeat.
-let score = 0;
-let questionCount = 0;
+let score = 0,
+    scorePercent = 0,
+    questionCount = 0;
+
 
 // questions
 const questionArray = [
@@ -40,6 +47,10 @@ const questionArray = [
     "Which method is used to schedule a function to run after a certain delay?",
     "What is the difference between 'null' and 'undefined' in JavaScript?"
   ];
+
+let totalScore = (questionArray.length)*10;
+totalScoreBox.innerHTML = totalScore;
+
 
 //   options
 
@@ -113,14 +124,34 @@ function changeQuestion() {
             optionD.innerHTML = mcqArray[questionIndex][3];
         }
         
+        questionCount++;
         if (questionCount > questionArray.length) {
-            console.log("gameEnds");
+            gameEndPanel.style.display = "flex";
+            gameScoreBox = `${score}`;
+            scorePercent = ((score/totalScore) * (100));
+            percentBox.innerHTML = `( ${scorePercent}% )`;
+            
+            if (scorePercent >= 80) {
+                remarkEmoji.innerHTML = "🤩";
+            } else if (scorePercent >= 70 && scorePercent < 80) {
+                remarkEmoji.innerHTML = "🥳";
+            } else if (scorePercent >= 60 && scorePercent < 70) {
+                remarkEmoji.innerHTML = "👏"; // Change this emoji
+            } else if (scorePercent >= 50 && scorePercent < 60) {
+                remarkEmoji.innerHTML = "👍";
+            } else if (scorePercent < 50 && scorePercent > 39) {
+                remarkEmoji.innerHTML = "😕";
+            } if (scorePercent <= 39 && scorePercent > 0) {
+                remarkEmoji.innerHTML = "😳";
+            }
+            } else if (scorePercent == 0) {
+                remarkEmoji.innerHTML = "🤐";
+            } else if (scorePercent == 100) {
+                remarkEmoji.innerHTML = "💯";
+            }
+            
         }
-        else{
-            questionCount++;
-        }
-    
-}
+
 // function will check whether the answer selected by user is right or not.
 function checkAnswer(userIndex) {
         console.log("Key: ", key[questionIndex]);
@@ -154,7 +185,7 @@ function checkAnswer(userIndex) {
     //if anser is correct
     if (key[questionIndex] == userIndex) {
         score+=10;
-        scoreSection.innerHTML = score
+        scoreSection.innerHTML = score;
         console.log("right");
 
         setTimeout(function(){

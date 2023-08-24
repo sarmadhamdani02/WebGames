@@ -35,6 +35,14 @@ function bubbleMaker(panelContent) {
   }
 
   document.querySelector(".panel-content").innerHTML = query;
+  var bubbles = document.getElementsByClassName("bubble");
+  for (let i = 0; i < bubbles.length; i++)
+  {
+      bubbles[i].style.animationName = "bubble-anim";
+      bubbles[i].style.animationIterationCount = "infinite";
+      bubbles[i].style.animationDelay = Math.random() + "s";
+      bubbles[i].style.animationDuration = 0.8 + Math.random()*0.5 + "s";
+  }
 }
 
 function gameOver() {

@@ -134,21 +134,35 @@ function changeQuestion() {
             
             if (scorePercent >= 80) {
                 remarkEmoji.innerHTML = "🤩";
+                percentBox.style.color = "limegreen";
             } else if (scorePercent >= 70 && scorePercent < 80) {
                 remarkEmoji.innerHTML = "🥳";
+                percentBox.style.color = "lime";
+
             } else if (scorePercent >= 60 && scorePercent < 70) {
                 remarkEmoji.innerHTML = "👏"; // Change this emoji
+
             } else if (scorePercent >= 50 && scorePercent < 60) {
                 remarkEmoji.innerHTML = "👍";
+                percentBox.style.color = "yeelow";
+                
             } else if (scorePercent < 50 && scorePercent > 39) {
                 remarkEmoji.innerHTML = "😕";
+                percentBox.style.color = "crimson";
+
             } if (scorePercent <= 39 && scorePercent > 0) {
                 remarkEmoji.innerHTML = "😳";
+                percentBox.style.color = "crimson";
+
             }
             } else if (scorePercent == 0) {
                 remarkEmoji.innerHTML = "🤐";
+                percentBox.style.color = "crimson";
+
             } else if (scorePercent == 100) {
                 remarkEmoji.innerHTML = "💯";
+                percentBox.style.color = "lightgreen";
+
             }
             
         }

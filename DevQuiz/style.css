@@ -64,7 +64,8 @@ body{
     font-size: 2.5vw;
 }
 
-.start-btn{
+.start-btn,
+.restart-btn{
     background-color: transparent;
     border: 1px solid white;
     padding: 10px 25px;
@@ -76,19 +77,27 @@ body{
     font-size: 1.3vw;
 }
 
-.start-btn:hover{
+.restart-btn{
+    margin-right: 4vw;
+}
+
+.start-btn:hover,
+.restart-btn:hover{
     color: #4def74;
 }
 
-.start-btn:hover .btn-brackets{
+.start-btn:hover .btn-brackets,
+.restart-btn:hover .btn-brackets{
     color: #2c4f9e;
 }
 
-.start-btn:hover .btn-colon{
+.start-btn:hover .btn-colon,
+.restart-btn:hover .btn-colon{
     color: #5aceff;
 }
 
-.start-btn:active{
+.start-btn:active,
+.restart-btn:active{
     border-color: #db78a1;
 }
 

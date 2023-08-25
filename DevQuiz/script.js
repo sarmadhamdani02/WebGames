@@ -127,7 +127,7 @@ function changeQuestion() {
         questionCount++;
         if (questionCount > questionArray.length) {
             gameEndPanel.style.display = "flex";
-            gameScoreBox = `${score}`;
+            gameScoreBox.innerHTML = `${score}`;
             scorePercent = ((score/totalScore) * (100));
             percentBox.innerHTML = `( ${scorePercent}% )`;
             
@@ -154,7 +154,6 @@ function changeQuestion() {
 
 // function will check whether the answer selected by user is right or not.
 function checkAnswer(userIndex) {
-        console.log("Key: ", key[questionIndex]);
 
         // make the right answer green
     if (key[questionIndex] == 0) {

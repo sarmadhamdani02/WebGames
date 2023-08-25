@@ -183,15 +183,6 @@ body{
     background-color: transparent;
 }
 
-.right-option{
-    color: limegreen;
-    border: 1px solid limegreen;
-}
-
-.wrong-option{
-    color: crimson;
-    border: 1px solid crimson;
-}
     
 .game-end-panel{
     position: absolute;
@@ -208,4 +199,15 @@ body{
     font-family: 'Nunito', sans-serif;
     color: white;
     flex-direction: column;
+}
+
+
+.right-option{
+    color: limegreen;
+    border: 1px solid limegreen;
+}
+
+    {
+    color: crimson;
+    border: 1px solid crimson;
 }

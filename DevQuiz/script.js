@@ -1,6 +1,7 @@
 
 // declaring variables here
 const startBtn = document.querySelector(".btn .start-btn");
+const restartBtn = document.querySelector(".restart-btn");
 const mainScreen = document.querySelector(".main-screen");
 const question = document.querySelector(".question-panel h1");
 const options = document.getElementsByClassName("options");
@@ -234,9 +235,21 @@ function selectTheme() {
     gameScreen.style.backgroundColor = themeColor;
 }
 
-gameFunction();
 
 // click start button on menu screen to perform
 startBtn.addEventListener("click",() => {
     mainScreen.style.display = "none";
 });
+
+// click on restart button to restart game
+restartBtn.addEventListener("click", () => {
+    gameFunction();
+    score = 0;
+    questionCount = 0;
+    scoreSection.innerHTML = score;
+    gameEndPanel.style.display = "none";
+});
+
+gameFunction();
+
+

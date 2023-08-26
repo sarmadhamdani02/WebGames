@@ -6,6 +6,7 @@
 
 body{
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 .game-instructions,
@@ -365,5 +366,16 @@ body{
     .exit{
         font-size: 5vw;
     }
+    
+    .game-panel{
+        width: 90vw;
+        height: 60vh;
+        overflow: hidden;
+        padding: 20px 10px ;
+    }
+    
+        .game-panel .score-panel{
+            font-size: 7vw;
+        }
 
 }

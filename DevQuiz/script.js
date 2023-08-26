@@ -16,14 +16,34 @@ const gameScoreBox = document.querySelector(".score-box");
 const totalScoreBox = document.querySelector(".total-score");
 const percentBox = document.querySelector(".percent");
 const remarkEmoji = document.querySelector(".remark-emoji");
+//debugging variable/s start
+const questionCountElement = document.querySelector(".question-count");
+const questionsAskedElement = document.querySelector(".questions-asked-array");
+const questionArrayLengthElement = document.querySelector(".questions-array-length");
 
+function print(msg)
+{
+    console.log(msg);
+}
+function updateQuestionCountElement(count){
+    questionCountElement.innerHTML = `question count: ${count}`;
+}
+function updateQuestionsArrayLengthElement(length)
+{
+    questionArrayLengthElement.innerHTML = `question array length: ${length} `
+}
+function updateQuestionsAskedElement(length)
+{
+    questionsAskedElement.innerHTML = `questions asked length : ${length} `
+}
+//debugging variables end here
 let questionIndex = 0;
 
 let questionsAsked = []; //all the asked questions will be entered in this array so they will never repeat.
 let score = 0,
     scorePercent = 0,
     questionCount = 0;
-
+updateQuestionCountElement(questionCount);
 
 // questions
 const questionArray = [
@@ -48,7 +68,8 @@ const questionArray = [
     "Which method is used to schedule a function to run after a certain delay?",
     "What is the difference between 'null' and 'undefined' in JavaScript?"
   ];
-
+  
+  updateQuestionsArrayLengthElement(questionArray.length)
 let totalScore = (questionArray.length)*10;
 totalScoreBox.innerHTML = totalScore;
 
@@ -112,25 +133,38 @@ function gameFunction() {
 // function will change questions and options
 function changeQuestion() {
     questionIndex = Math.floor(Math.random()*questionArray.length);
-        if (questionsAsked.includes(questionIndex)) {
-            changeQuestion();
-        }
-        else{
+
+    print(`question index now: ${questionIndex}`)
+    print(`questionCount: ${questionCount}`)
+    
+        if(questionsAsked.length < questionArray.length )
+        {
+            if (questionsAsked.includes(questionIndex)) changeQuestion();
+            
             questionsAsked.push(questionIndex);
+            updateQuestionsAskedElement(questionsAsked.length)
             question.innerHTML = questionArray[questionIndex]; //change question text
             // change option text
             optionA.innerHTML = mcqArray[questionIndex][0];
             optionB.innerHTML = mcqArray[questionIndex][1];
             optionC.innerHTML = mcqArray[questionIndex][2];
             optionD.innerHTML = mcqArray[questionIndex][3];
+            
+        }else{
+            
+            questionsAsked.length = 0;
+            updateQuestionsAskedElement(questionsAsked.length)
         }
         
         questionCount++;
+        updateQuestionCountElement(questionCount);
         if (questionCount > questionArray.length) {
             gameEndPanel.style.display = "flex";
             gameScoreBox.innerHTML = `${score}`;
             scorePercent = ((score/totalScore) * (100));
             percentBox.innerHTML = `( ${scorePercent}% )`;
+            // questionCount = 0;
+        }
             
             if (scorePercent >= 80) {
                 remarkEmoji.innerHTML = "🤩";
@@ -150,92 +184,88 @@ function changeQuestion() {
                 remarkEmoji.innerHTML = "😕";
                 percentBox.style.color = "crimson";
 
-            } if (scorePercent <= 39 && scorePercent > 0) {
+            } 
+            if (scorePercent <= 39 && scorePercent > 0) {
                 remarkEmoji.innerHTML = "😳";
                 percentBox.style.color = "crimson";
 
             }
-            } else if (scorePercent == 0) {
+            else if (scorePercent === 0) {
                 remarkEmoji.innerHTML = "🤐";
                 percentBox.style.color = "crimson";
 
-            } else if (scorePercent == 100) {
+            } else if (scorePercent === 100) {
                 remarkEmoji.innerHTML = "💯";
                 percentBox.style.color = "lightgreen";
 
             }
             
-        }
+}
 
 // function will check whether the answer selected by user is right or not.
 function checkAnswer(userIndex) {
-
-        // make the right answer green
-    if (key[questionIndex] == 0) {
-        optionA.classList.add("right-option");
-        // optionA.style.borderColor = "limegreen";
-        console.log("rightA");
-
+    // make the right answer green
+    switch(key[questionIndex])
+    {
+        case 0:
+            optionA.classList.add("right-option");
+            print("rightA");
+            break;
+        case 1: 
+            optionB.classList.add("right-option");
+            print("rightB");
+            break;
+        case 2:
+            optionC.classList.add("right-option");
+            print("rightC");    
+            break;
+            
+        case 3:            
+            optionD.classList.add("right-option");
+            print("rightD");
+            break;
     }
-
-    else if (key[questionIndex] == 1) {
-        optionB.classList.add("right-option");
-        console.log("rightB");
-
-    }
-
-    else if (key[questionIndex] == 2) {
-        optionC.classList.add("right-option");
-        console.log("rightC");
-
-    }
-
-    else if (key[questionIndex] == 3) {
-        optionD.classList.add("right-option");
-        console.log("rightD");
-
-    }
+     
 
     //if anser is correct
-    if (key[questionIndex] == userIndex) {
+    if (key[questionIndex] === userIndex) {
         score+=10;
         scoreSection.innerHTML = score;
-        console.log("right");
-
-        setTimeout(function(){
-            changeQuestion();
-        },200);
+        print("right");
+        changeQuestion();
+        // commented out
+        // setTimeout(function(){
+        //     changeQuestion();
+        // },200);
     }
     else{ //if answer is not correct
         
-        if (userIndex == 0) {
+        if (userIndex === 0) {
             optionA.classList.add("wrong-option");
             // optionA.style.borderColor = "limegreen";
-            console.log("clickedA");
+            print("clickedA");
 
         }
-
-        else if (userIndex == 1) {
+        else if (userIndex === 1) {
             optionB.classList.add("wrong-option");
-            console.log("clickedB");
+            print("clickedB");
 
         }
-
-        else if (userIndex == 2) {
+        else if (userIndex === 2) {
             optionC.classList.add("wrong-option");
-            console.log("rightC");
+            print("rightC");
 
         }
-
-        else if (userIndex == 3) {
+        else if (userIndex === 3) {
             optionD.classList.add("wrong-option");
-            console.log("rightD");
+            print("rightD");
 
         }
-
-        setTimeout(function(){
-            changeQuestion();
-        },200);
+        changeQuestion();
+        //commented out
+        // setTimeout(function(){
+        //     changeQuestion();
+        // },200);
        
 
     }
@@ -260,6 +290,9 @@ restartBtn.addEventListener("click", () => {
     gameFunction();
     score = 0;
     questionCount = 0;
+    updateQuestionCountElement(questionCount);
+    questionsAsked.length = 0;
+    updateQuestionsAskedElement(questionsAsked.length)
     scoreSection.innerHTML = score;
     gameEndPanel.style.display = "none";
 });

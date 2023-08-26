@@ -6,6 +6,7 @@
 
 body{
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 .game-instructions,
@@ -325,5 +326,56 @@ body{
         filter: opacity(1);
 
     }
+
+}
+
+/* media queries */
+@media (max-width:600px) {
+    
+    .main-screen{
+        font-size: 3vw;
+    }
+
+    .main-screen .string{
+        font-size: 5vw;
+    }
+    
+    .start-btn,
+    .restart-btn{
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 5vw;
+    }
+
+    .game-instructions{
+        padding-right:7vw;
+        width: 80vw;
+        left: 5.5vw;
+        top: 5vh;
+    }
+
+    .inst-heading,
+    .inst-heading .string{
+    font-size: 3.5vw;
+    }
+
+    .inst-text{
+        font-size: 3.3vw;
+    }
+
+    .exit{
+        font-size: 5vw;
+    }
+    
+    .game-panel{
+        width: 90vw;
+        height: 60vh;
+        overflow: hidden;
+        padding: 20px 10px ;
+    }
+    
+        .game-panel .score-panel{
+            font-size: 7vw;
+        }
 
 }

@@ -216,7 +216,7 @@ body{
     border: 1px solid limegreen;
 }
 
-    {
+.wrong-option{
     color: crimson;
     border: 1px solid crimson;
 }

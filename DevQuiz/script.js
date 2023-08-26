@@ -16,6 +16,9 @@ const gameScoreBox = document.querySelector(".score-box");
 const totalScoreBox = document.querySelector(".total-score");
 const percentBox = document.querySelector(".percent");
 const remarkEmoji = document.querySelector(".remark-emoji");
+const readInstructionBtn = document.querySelector(".read-instruction");
+const instructionPanel = document.querySelector(".game-instructions");
+const instExitBtn = document.querySelector(".close-btn");
 
 let questionIndex = 0;
 
@@ -251,6 +254,15 @@ restartBtn.addEventListener("click", () => {
     questionCount = 0;
     scoreSection.innerHTML = score;
     gameEndPanel.style.display = "none";
+});
+
+// read instruction button on main screen functionality
+readInstructionBtn.addEventListener("click", () => {
+    instructionPanel.style.display = "flex";
+});
+
+instExitBtn.addEventListener("click", () => {
+    instructionPanel.style.display = "none";
 });
 
 gameFunction();

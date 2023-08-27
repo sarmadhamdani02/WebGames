@@ -266,6 +266,8 @@ input:checked + .slider:before {
   .main-content {
     padding: 5px;
     justify-content: center;
+    height: auto;
+
   }
 
   .main-content .game {

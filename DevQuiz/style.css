@@ -9,7 +9,7 @@ body{
 }
 /* this should block should be set as display: none; as this is used for debugging purposes only */
 .question-count-wrapper{
-    display: flex;
+    display: none;
     flex-direction: column;
     position: absolute;
     padding: 20px;

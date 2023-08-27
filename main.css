@@ -160,7 +160,7 @@ input:checked + .slider:before {
 
 .main-content {
   overflow: hidden;
-  height: calc(100vh - 190px);
+  height: 100vh;
   width: 100vw;
   background-color: white;
   display: flex;
@@ -235,7 +235,6 @@ input:checked + .slider:before {
 
   .nav-bar {
     height: 75px;
-    width: 100vw;
     gap: 0px;
     text-align: center;
     justify-content: space-between;
@@ -270,7 +269,7 @@ input:checked + .slider:before {
     flex-wrap: wrap;
     justify-content: center;
     align-content: flex-start;
-    gap: 10px; /* Adjust the gap between items */
+    gap: 10px;
   }
 
   .main-content .game {
@@ -285,7 +284,7 @@ input:checked + .slider:before {
   .side-bar-menu {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 170px);
+    height: 100vh;
     width: 0;
     position: fixed;
     z-index: 1;

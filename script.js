@@ -1,10 +1,13 @@
 let toggleSwitch = document.getElementById("toggle");
 let toggleSideSwitch = document.getElementById("dark-mode-toggle-sidebar");
 const mainContent = document.getElementsByClassName("main-content");
+const mainContentQS = document.querySelector(".main-content");
 const navBar = document.getElementsByClassName("nav-bar");
 const gameText = document.getElementsByClassName("game-text");
 const navItem = document.getElementsByClassName("nav-item");
 const gameIcon = document.getElementsByClassName("game");
+const sideBar = document.getElementById("side-bar-menu");
+
 
 const onToggleDarkMode = () => {
   if (toggleSwitch.checked == true) {
@@ -42,6 +45,7 @@ const onToggleDarkMode = () => {
 const onSideToggleDarkMode = () => {
   if (toggleSideSwitch.checked == true) {
     mainContent[0].style.backgroundColor = "#15202B";
+    sideBar.style.backgroundColor = "rgb(1, 125, 63)";
     for (let i = 0; i < gameText.length; i++) {
       gameText[i].style.color = "#E4E6EB";
     }
@@ -57,6 +61,9 @@ const onSideToggleDarkMode = () => {
   }
   else {
     mainContent[0].style.backgroundColor = "white";
+    sideBar.style.backgroundColor = "rgb(1, 125, 63)";
+    sideBar.style.backgroundColor = "rgb(0, 144, 72)  ";
+
     for (let i = 0; i < gameText.length; i++) {
       gameText[i].style.color = "#333333";
     }
@@ -72,13 +79,21 @@ const onSideToggleDarkMode = () => {
   }
 }
 
+mainContentQS.addEventListener("click", () => {
+  sideBar.style.width = 0;
+  mainContentQS.style.filter = "brightness(1)";
+});
+
 const toggleSideBar = () => {
-  const sideBar = document.getElementById("side-bar-menu");
   const currentWidth = sideBar.style.width;
-  if (currentWidth === "250px") {
+  if (currentWidth === "73vw") {
     sideBar.style.width = "0";
+    mainContentQS.style.filter = "brightness(1)";
+
   } else {
-    sideBar.style.width = "250px"
+    sideBar.style.width = "73vw";
+    mainContentQS.style.filter = "brightness(50%)";
+
   }
 }
 

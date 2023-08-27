@@ -160,7 +160,7 @@ input:checked + .slider:before {
 
 .main-content {
   overflow: hidden;
-  height: calc(100vh - 50px);
+  height: calc(100vh - 190px);
   width: 100vw;
   background-color: white;
   display: flex;
@@ -170,6 +170,7 @@ input:checked + .slider:before {
   flex-wrap: wrap;
   gap: 20px;
   padding: 30px;
+  transition: all 300ms;
 }
 
 .main-content .game {
@@ -234,7 +235,7 @@ input:checked + .slider:before {
 
   .nav-bar {
     height: 75px;
-    width: auto;
+    width: 100vw;
     gap: 0px;
     text-align: center;
     justify-content: space-between;
@@ -282,17 +283,21 @@ input:checked + .slider:before {
   }
 
   .side-bar-menu {
-    display: block;
-    height: 100%;
+    display: flex;
+    flex-direction: column;
+    height: calc(100vh - 170px);
     width: 0;
     position: fixed;
     z-index: 1;
     top: 0;
     left: 0;
     background-color: rgb(0, 144, 72);
-    overflow-x: hidden;
-    transition: 0.5s;
-    padding-top: 60px;
+    overflow: hidden;
+    transition: 0.3s;
+    padding-top: 15vh;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    box-shadow: 0.5px 0 20px rgba(0, 0, 0, 0.541);
   }
 
   .side-bar-link {

@@ -265,9 +265,11 @@ input:checked + .slider:before {
 
   .main-content {
     padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
     justify-content: center;
-    height: auto;
-
+    align-content: flex-start;
+    gap: 10px; /* Adjust the gap between items */
   }
 
   .main-content .game {

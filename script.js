@@ -1,10 +1,13 @@
 let toggleSwitch = document.getElementById("toggle");
 let toggleSideSwitch = document.getElementById("dark-mode-toggle-sidebar");
 const mainContent = document.getElementsByClassName("main-content");
+const mainContentQS = document.querySelector(".main-content");
 const navBar = document.getElementsByClassName("nav-bar");
 const gameText = document.getElementsByClassName("game-text");
 const navItem = document.getElementsByClassName("nav-item");
 const gameIcon = document.getElementsByClassName("game");
+const sideBar = document.getElementById("side-bar-menu");
+
 
 const onToggleDarkMode = () => {
   if (toggleSwitch.checked == true) {
@@ -72,13 +75,20 @@ const onSideToggleDarkMode = () => {
   }
 }
 
+mainContentQS.addEventListener("click", () => {
+  sideBar.style.width = 0;
+});
+
 const toggleSideBar = () => {
-  const sideBar = document.getElementById("side-bar-menu");
   const currentWidth = sideBar.style.width;
-  if (currentWidth === "250px") {
+  if (currentWidth === "73vw") {
     sideBar.style.width = "0";
+    mainContentQS.style.filter = "brightness(1)";
+
   } else {
-    sideBar.style.width = "250px"
+    sideBar.style.width = "73vw";
+    mainContentQS.style.filter = "brightness(50%)";
+
   }
 }
 

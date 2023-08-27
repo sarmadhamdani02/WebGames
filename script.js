@@ -45,6 +45,7 @@ const onToggleDarkMode = () => {
 const onSideToggleDarkMode = () => {
   if (toggleSideSwitch.checked == true) {
     mainContent[0].style.backgroundColor = "#15202B";
+    sideBar.style.backgroundColor = "rgb(1, 125, 63)";
     for (let i = 0; i < gameText.length; i++) {
       gameText[i].style.color = "#E4E6EB";
     }
@@ -60,6 +61,9 @@ const onSideToggleDarkMode = () => {
   }
   else {
     mainContent[0].style.backgroundColor = "white";
+    sideBar.style.backgroundColor = "rgb(1, 125, 63)";
+    sideBar.style.backgroundColor = "rgb(0, 144, 72)  ";
+
     for (let i = 0; i < gameText.length; i++) {
       gameText[i].style.color = "#333333";
     }
@@ -77,6 +81,7 @@ const onSideToggleDarkMode = () => {
 
 mainContentQS.addEventListener("click", () => {
   sideBar.style.width = 0;
+  mainContentQS.style.filter = "brightness(1)";
 });
 
 const toggleSideBar = () => {

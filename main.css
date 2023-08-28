@@ -87,6 +87,13 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: transparent;
+  border: none;
+  font-family: "Press Start 2P", cursive;
+}
+
+#dark-mode-sidebar p {
+  font-size: 16px;
 }
 
 .fa-github {

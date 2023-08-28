@@ -55,11 +55,15 @@ body{
     background-color: rgba(255, 255, 255, 0.101);
 }
 
-.nav-bar .nav-elem button a{
+.nav-bar .nav-elem button a, p{
     color: white;
     font-size: 20px;
     text-decoration: none;
     text-transform: capitalize;
+}
+
+.fa-sun{
+    padding-left: 10px;
 }
 
 .fa-github{
@@ -203,7 +207,7 @@ input:checked + .slider:before {
     color: #111111;
 }
 
-@media (max-width: 700px) {
+@media (max-width: 1000px) {
 
     body{
         overflow-x: hidden;
@@ -241,6 +245,9 @@ input:checked + .slider:before {
         display: none;
     }
 
+    .nav-bar button a p .fa-sun{
+        visibility: visible;
+    }
 
     .main-content{
         gap: 10vw;

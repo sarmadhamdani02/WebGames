@@ -171,7 +171,7 @@ input:checked + .slider:before {
 
 .main-content {
   overflow: hidden;
-  height: calc(100vh - 190px);
+  height: 100vh;
   width: 100vw;
   background-color: white;
   display: flex;

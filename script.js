@@ -7,10 +7,10 @@ const gameText = document.getElementsByClassName("game-text");
 const navItem = document.getElementsByClassName("nav-item");
 const gameIcon = document.getElementsByClassName("game");
 const sideBar = document.getElementById("side-bar-menu");
-
+const darkModeIcon = document.getElementById("dark-mode-icon");
 
 const onToggleDarkMode = () => {
-  if (toggleSwitch.checked == true) {
+  if (darkModeIcon.classList.contains('fa-moon')) {
     mainContent[0].style.backgroundColor = "#15202B";
     for (let i = 0; i < gameText.length; i++) {
       gameText[i].style.color = "#E4E6EB";
@@ -24,6 +24,7 @@ const onToggleDarkMode = () => {
     for (let i = 0; i < navItem.length; i++) {
       navItem[i].style.color = "#212628";
     }
+    darkModeIcon.className = "fa-solid fa-sun";
   }
   else {
     mainContent[0].style.backgroundColor = "white";
@@ -39,6 +40,7 @@ const onToggleDarkMode = () => {
     for (let i = 0; i < navItem.length; i++) {
       navItem[i].style.color = "white";
     }
+    darkModeIcon.className = "fa-solid fa-moon";
   }
 }
 

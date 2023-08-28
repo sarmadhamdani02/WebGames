@@ -17,6 +17,7 @@ const gameScoreBox = document.querySelector(".score-box");
 const totalScoreBox = document.querySelector(".total-score");
 const percentBox = document.querySelector(".percent");
 const remarkEmoji = document.querySelector(".remark-emoji");
+
 //debugging variables and functions start
 const questionCountElement = document.querySelector(".question-count");
 const questionsAskedElement = document.querySelector(".questions-asked-array");
@@ -42,6 +43,12 @@ function updateQuestionsAskedElement(length)
     questionsAskedElement.innerHTML = `questions asked length : ${length} `
 }
 //debugging variables and functions end here
+
+const readInstructionBtn = document.querySelector(".read-instruction");
+const instructionPanel = document.querySelector(".game-instructions");
+const instExitBtn = document.querySelector(".close-btn");
+
+
 let questionIndex = 0;
 
 let questionsAsked = []; //all the asked questions will be entered in this array so they will never repeat.
@@ -228,29 +235,25 @@ function checkAnswer(userIndex) {
     switch(key[questionIndex])
     {
         case 0:
-            optionA.classList.add("right-option");           
-            print("rightA");
+            optionA.classList.add("right-option");
             break;
         case 1: 
-            optionB.classList.add("right-option");           
-            print("rightB");
+            optionB.classList.add("right-option");
             break;
         case 2:
-            optionC.classList.add("right-option");           
-            print("rightC");    
+            optionC.classList.add("right-option"); 
             break;
             
         case 3:            
-            optionD.classList.add("right-option");           
-            print("rightD");
+            optionD.classList.add("right-option"); 
             break;
     }    
     const waitTimeBeforeTheNextQuestion = 200;
+
     //if anser is correct
     if (key[questionIndex] === userIndex) {
         score+=10;
         scoreSection.innerHTML = score;
-        print("right"); 
         setTimeout(function(){
             changeQuestion();
         },waitTimeBeforeTheNextQuestion);
@@ -273,6 +276,7 @@ function checkAnswer(userIndex) {
         else if (userIndex === 3) {
             optionD.classList.add("wrong-option");            
             print("rightD");
+
         }
         setTimeout(function(){
             changeQuestion();
@@ -305,6 +309,15 @@ restartBtn.addEventListener("click", () => {
     updateQuestionsAskedElement(questionsAsked.length)
     scoreSection.innerHTML = score;
     gameEndPanel.style.display = "none";
+});
+
+// read instruction button on main screen functionality
+readInstructionBtn.addEventListener("click", () => {
+    instructionPanel.style.display = "flex";
+});
+
+instExitBtn.addEventListener("click", () => {
+    instructionPanel.style.display = "none";
 });
 
 gameFunction();

@@ -1,38 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
-  <link rel="icon" href="assets/page_icon.png">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Press+Start+2P&display=swap"
-    rel="stylesheet">
-  <!-- font awesome cdn -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
-    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer" />
-  <link rel="stylesheet" href="main.css" />
+    <link rel="icon" href="assets/page_icon.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Play:wght@700&family=Press+Start+2P&display=swap"
+      rel="stylesheet" />
+    <!-- font awesome cdn -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="main.css" />
 
     <script defer src="script.js"></script>
     <title>Web Games</title>
-</head>
+  </head>
 
-<body>
-  <nav class="nav-bar">
-    <h1>Web Games</h1>
-    <div class="nav-elem">
-      <button>
-          <a class="a-text nav-item" href="https://github.com/sarmadhamdani02/webGames" target="_blank">contribute&nbsp;</a>
-          <a href="https://github.com/sarmadhamdani02/webGames" target="_blank"><i class="fa-brands fa-github nav-item"></i></a>
-      </button>
-            
-      <button>
-          <a class="a-text nav-item" href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank">About&nbsp;</a>
-          <a href="https://github.com/sarmadhamdani02/webGames#readme" target="_blank"><i class="fa-solid fa-circle-info nav-item"></i><a>
-      </button>
+  <body>
+    <nav class="nav-bar">
+      <h1>Web Games</h1>
+      <div class="nav-elem">
+        <button>
+          <a
+            class="a-text nav-item"
+            href="https://github.com/sarmadhamdani02/webGames"
+            target="_blank"
+            >contribute&nbsp;</a
+          >
+          <a href="https://github.com/sarmadhamdani02/webGames" target="_blank"
+            ><i class="fa-brands fa-github nav-item"></i
+          ></a>
+        </button>
 
       <button>
         <p class="a-text">Dark Mode<i class="fa-solid fa-sun"></i></p>
@@ -46,29 +51,79 @@
           <input type="checkbox" id="toggle" onclick="onToggleDarkMode()"><span class="slider"></span>
         </label>-->
       <!--</div>-->
+        <button>
+          <a
+            class="a-text nav-item"
+            href="https://github.com/sarmadhamdani02/webGames#readme"
+            target="_blank"
+            >About&nbsp;</a
+          >
+          <a
+            href="https://github.com/sarmadhamdani02/webGames#readme"
+            target="_blank"
+            ><i class="fa-solid fa-circle-info nav-item"></i
+          ></a>
+        </button>
+
+        <div id="dark-mode">
+          <p class="nav-item">Dark Mode</p>
+          <label class="switch">
+            <input
+              type="checkbox"
+              id="toggle"
+              onclick="onToggleDarkMode()" /><span class="slider"></span>
+          </label>
+        </div>
+      </div>
+
+      <div class="side-bar-menu" id="side-bar-menu">
+        <div class="side-bar-link">
+          <a
+            class=""
+            href="https://github.com/sarmadhamdani02/webGames"
+            target="_blank"
+            >contribute <i class="fa-brands fa-github nav-item"></i>
+          </a>
+
+          <a
+            class=""
+            href="https://github.com/sarmadhamdani02/webGames#readme"
+            target="_blank"
+            >About <i class="fa-solid fa-circle-info nav-item"></i>
+          </a>
+
+          <div id="dark-mode-sidebar">
+            <p class="">Dark Mode</p>
+            <label class="switch">
+              <input
+                type="checkbox"
+                id="dark-mode-toggle-sidebar"
+                onclick="onSideToggleDarkMode()" /><span class="slider"></span>
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <button class="side-bar-button" id="toggleSideBar" onclick="toggleSideBar()">
+        <i class="fa-solid fa-bars"></i>
+      </button>
+    </nav>
+
+    <div class="main-content">
+      <a href="tic-tac-toe/index.html" class="game game1" target="_blank">
+        <img src="assets/tic-tac-toe.png" alt="" />
+        <h3 class="game-text">Tic-Tac-Toe</h3>
+      </a>
+
+      <a href="BubbleGame/index.html" class="game game1" target="_blank">
+        <img src="assets/the_bubble_game.png" alt="" />
+        <h3 class="game-text">The Bubble Game</h3>
+      </a>
+
+      <a href="DevQuiz/index.html" class="game game1" target="_blank">
+        <img src="assets/dev_quiz.png" alt="" />
+        <h3 class="game-text">Dev Quiz</h3>
+      </a>
     </div>
-  </nav>
-
-  <div class="main-content">
-    <a href="tic-tac-toe/index.html" class="game game1" target="_blank">
-      <img src="assets/tic-tac-toe.png" alt="">
-      <h3 class="game-text">Tic-Tac-Toe</h3>
-
-    </a>
-
-    <a href="BubbleGame/index.html" class="game game1" target="_blank">
-      <img src="assets/the_bubble_game.png" alt="">
-      <h3 class="game-text">The Bubble Game</h3>
-
-    </a>
-
-    <a href="DevQuiz/index.html" class="game game1" target="_blank">
-      <img src="assets/dev_quiz.png" alt="">
-      <h3 class="game-text">Dev Quiz</h3>
-
-    </a>
-
-  </div>
-</body>
-
+  </body>
 </html>

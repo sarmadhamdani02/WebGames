@@ -6,8 +6,10 @@
 
 body{
     font-family: sans-serif;
+    overflow: hidden;
 }
 
+.game-instructions,
 .main-screen,
 .game-screen,
 .question-panel,
@@ -29,6 +31,7 @@ body{
     gap: 15vh;
 }
 
+.output,
 .code,
 .string,
 .start-btn,
@@ -62,6 +65,10 @@ body{
 .string{
     color: #e9ef84;
     font-size: 2.5vw;
+}
+
+.output{
+    color: #dedede;
 }
 
 .start-btn,
@@ -101,19 +108,24 @@ body{
     border-color: #db78a1;
 }
 
+
+.exit:hover,
 .read-instruction{
     cursor: pointer;
     user-select: none;
 }
 
+.exit:hover,
 .read-instruction:hover{
     text-shadow: #4def74 1px 0 10px;;
 }
 
+.exit:hover .brackets,
 .read-instruction:hover .brackets{
     text-shadow: #2c4f9e 1px 0 10px;;
 }
 
+.exit:hover,
 .read-instruction:hover .colon{
     text-shadow: #5aceff 1px 0 10px;;
 }
@@ -210,13 +222,160 @@ body{
     flex-direction: column;
 }
 
+.exit{
+    font-size: 1.3vw;
+    justify-self: flex-end;
+    cursor: pointer;
+    margin-left: 45vw;
+}
+
+.is-love{
+    color: crimson;
+}
+
+.game-instructions{
+    display: none;
+    padding: 10px;
+    padding-right: 20px;
+    background-color: #111111d6;
+    border-radius: 30px;
+    flex-direction: column;
+    border: 1px solid white;
+    width: 55vw;
+    height: 75vh;
+    position: absolute;
+    backdrop-filter: blur(3px);
+    left: 21vw;
+    top: 12vh;
+    z-index: 12;
+    transition: 400ms;
+}
+
+.game-instructions:hover{
+    box-shadow: 0 0 30px #4def74;
+}
+
+.instructions{
+    margin-left: 40px;
+    margin-top: 20px;
+}
+
+.inst-heading,
+.inst-heading .string{
+    font-size: 1.2vw;
+}
+
+.inst-text{
+    color: #dedede;
+    font-family: "fira code";
+    font-size: 1.2vw;
+    font-weight: 300;
+}
+
+.inst-text li{
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.inst-text li::before{
+    content: "- ";
+}
+
+.output{
+    animation: output-anime 800ms linear infinite;
+}
 
 .right-option{
     color: limegreen;
     border: 1px solid limegreen;
 }
 
-    {
+.wrong-option{
     color: crimson;
     border: 1px solid crimson;
+}
+
+@keyframes output-anime {
+    
+    0%{
+        filter: opacity(1);
+
+    }
+    
+    20%{
+        filter: opacity(0);
+
+    }
+    
+    40%{
+        filter: opacity(1);
+
+    }
+    
+    60%{
+        filter: opacity(1);
+
+    }
+    
+    80%{
+        filter: opacity(0);
+
+    }
+    
+    100%{
+        filter: opacity(1);
+
+    }
+
+}
+
+/* media queries */
+@media (max-width:600px) {
+    
+    .main-screen{
+        font-size: 3vw;
+    }
+
+    .main-screen .string{
+        font-size: 5vw;
+    }
+    
+    .start-btn,
+    .restart-btn{
+        padding: 10px 25px;
+        border-radius: 30px;
+        font-size: 5vw;
+    }
+
+    .game-instructions{
+        padding-right:7vw;
+        width: 80vw;
+        left: 5.5vw;
+        top: 5vh;
+    }
+
+    .inst-heading,
+    .inst-heading .string{
+    font-size: 3.5vw;
+    }
+
+    .inst-text{
+        font-size: 3.3vw;
+    }
+
+    .exit{
+        font-size: 5vw;
+    }
+    
+    .game-panel{
+        width: 90vw;
+        height: 60vh;
+        overflow: hidden;
+        padding: 20px 10px ;
+    }
+    
+        .game-panel .score-panel{
+            font-size: 7vw;
+        }
+
 }

@@ -16,6 +16,9 @@ const gameScoreBox = document.querySelector(".score-box");
 const totalScoreBox = document.querySelector(".total-score");
 const percentBox = document.querySelector(".percent");
 const remarkEmoji = document.querySelector(".remark-emoji");
+const readInstructionBtn = document.querySelector(".read-instruction");
+const instructionPanel = document.querySelector(".game-instructions");
+const instExitBtn = document.querySelector(".close-btn");
 
 let questionIndex = 0;
 
@@ -173,26 +176,21 @@ function checkAnswer(userIndex) {
         // make the right answer green
     if (key[questionIndex] == 0) {
         optionA.classList.add("right-option");
-        // optionA.style.borderColor = "limegreen";
-        console.log("rightA");
 
     }
 
     else if (key[questionIndex] == 1) {
         optionB.classList.add("right-option");
-        console.log("rightB");
 
     }
 
     else if (key[questionIndex] == 2) {
         optionC.classList.add("right-option");
-        console.log("rightC");
 
     }
 
     else if (key[questionIndex] == 3) {
         optionD.classList.add("right-option");
-        console.log("rightD");
 
     }
 
@@ -200,7 +198,6 @@ function checkAnswer(userIndex) {
     if (key[questionIndex] == userIndex) {
         score+=10;
         scoreSection.innerHTML = score;
-        console.log("right");
 
         setTimeout(function(){
             changeQuestion();
@@ -210,26 +207,21 @@ function checkAnswer(userIndex) {
         
         if (userIndex == 0) {
             optionA.classList.add("wrong-option");
-            // optionA.style.borderColor = "limegreen";
-            console.log("clickedA");
 
         }
 
         else if (userIndex == 1) {
             optionB.classList.add("wrong-option");
-            console.log("clickedB");
 
         }
 
         else if (userIndex == 2) {
             optionC.classList.add("wrong-option");
-            console.log("rightC");
 
         }
 
         else if (userIndex == 3) {
             optionD.classList.add("wrong-option");
-            console.log("rightD");
 
         }
 
@@ -262,6 +254,15 @@ restartBtn.addEventListener("click", () => {
     questionCount = 0;
     scoreSection.innerHTML = score;
     gameEndPanel.style.display = "none";
+});
+
+// read instruction button on main screen functionality
+readInstructionBtn.addEventListener("click", () => {
+    instructionPanel.style.display = "flex";
+});
+
+instExitBtn.addEventListener("click", () => {
+    instructionPanel.style.display = "none";
 });
 
 gameFunction();

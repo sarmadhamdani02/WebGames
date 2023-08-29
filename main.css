@@ -194,7 +194,7 @@ input:checked + .slider:before {
   border-radius: 20px;
   padding: 10px 0;
   position: relative;
-  width: 14vw;
+  width: 12vw;
   cursor: pointer;
   overflow: hidden;
 }
@@ -246,7 +246,6 @@ input:checked + .slider:before {
 
   .nav-bar {
     height: 75px;
-    width: 100vw;
     gap: 0px;
     text-align: center;
     justify-content: space-between;
@@ -276,11 +275,16 @@ input:checked + .slider:before {
   }
 
   .main-content {
-    gap: 10vw;
+    padding: 5px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start;
+    gap: 10px;
   }
 
   .main-content .game {
-    width: 30vw;
+    width: 28vw;
   }
 
   .game img {
@@ -291,7 +295,7 @@ input:checked + .slider:before {
   .side-bar-menu {
     display: flex;
     flex-direction: column;
-    height: calc(100vh - 170px);
+    height: 100vh;
     width: 0;
     position: fixed;
     z-index: 1;

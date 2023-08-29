@@ -161,7 +161,7 @@ body{
     width: 70vw;
     border: 1px solid white;
     border-radius: 10px;
-    gap: 80px;
+    gap: 40px;
 }
 
 .question-panel{
@@ -369,7 +369,7 @@ body{
     
     .game-panel{
         width: 90vw;
-        height: 60vh;
+        height: 90vh;
         overflow: hidden;
         padding: 20px 10px ;
     }

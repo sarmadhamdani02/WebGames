@@ -9,6 +9,27 @@ body{
     overflow: hidden;
 }
 
+/* this should block should be set as display: none; as this is used for debugging purposes only */
+.question-count-wrapper{
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    padding: 20px;
+    border-radius: 10px;
+    outline: 1px solid white;
+    gap: 10px;
+    --position-top-left-distance: 20px;
+    bottom: var(--position-top-left-distance);
+    left: var(--position-top-left-distance);
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: #1a1b26;
+    .question-count{
+        display: inherit;
+    }
+}
+
 .game-instructions,
 .main-screen,
 .game-screen,
@@ -19,7 +40,7 @@ body{
 .result-panel{
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: center;    
 }
 
 .main-screen{
@@ -379,3 +400,4 @@ body{
         }
 
 }
+

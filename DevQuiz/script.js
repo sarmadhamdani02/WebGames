@@ -4,6 +4,7 @@ const startBtn = document.querySelector(".btn .start-btn");
 const restartBtn = document.querySelector(".restart-btn");
 const mainScreen = document.querySelector(".main-screen");
 const question = document.querySelector(".question-panel h1");
+const optionPanel = document.querySelector(".option-panel")
 const options = document.getElementsByClassName("options");
 const optionA = document.querySelector(".option-a");
 const optionB = document.querySelector(".option-b");
@@ -16,9 +17,37 @@ const gameScoreBox = document.querySelector(".score-box");
 const totalScoreBox = document.querySelector(".total-score");
 const percentBox = document.querySelector(".percent");
 const remarkEmoji = document.querySelector(".remark-emoji");
+
+//debugging variables and functions start
+const questionCountElement = document.querySelector(".question-count");
+const questionsAskedElement = document.querySelector(".questions-asked-array");
+const questionArrayLengthElement = document.querySelector(".questions-array-length");
+let optionPanelPointerEventEnabled = true;
+
+function print(msg)
+{
+    console.log(msg);
+}
+function updateQuestionCountElement(count){
+    //this function is for debugging purposes only
+    questionCountElement.innerHTML = `question count: ${count}`;
+}
+function updateQuestionsArrayLengthElement(length)
+{
+    //this function is for debugging purposes only
+    questionArrayLengthElement.innerHTML = `question array length: ${length} `
+}
+function updateQuestionsAskedElement(length)
+{
+    //this function is for debugging purposes only
+    questionsAskedElement.innerHTML = `questions asked length : ${length} `
+}
+//debugging variables and functions end here
+
 const readInstructionBtn = document.querySelector(".read-instruction");
 const instructionPanel = document.querySelector(".game-instructions");
 const instExitBtn = document.querySelector(".close-btn");
+
 
 let questionIndex = 0;
 
@@ -26,7 +55,7 @@ let questionsAsked = []; //all the asked questions will be entered in this array
 let score = 0,
     scorePercent = 0,
     questionCount = 0;
-
+updateQuestionCountElement(questionCount);
 
 // questions
 const questionArray = [
@@ -51,7 +80,8 @@ const questionArray = [
     "Which method is used to schedule a function to run after a certain delay?",
     "What is the difference between 'null' and 'undefined' in JavaScript?"
   ];
-
+  
+  updateQuestionsArrayLengthElement(questionArray.length)
 let totalScore = (questionArray.length)*10;
 totalScoreBox.innerHTML = totalScore;
 
@@ -103,6 +133,50 @@ const themeColorArray = [
 
 // application logic
 selectTheme();
+function showGameOverScreen()
+{
+    gameEndPanel.style.display = "flex";
+    gameScoreBox.innerHTML = `${score}`;
+    scorePercent = ((score/totalScore) * (100));
+    percentBox.innerHTML = `( ${scorePercent}% )`; 
+}
+function calculateTheFinalScore()
+{
+    
+    if (scorePercent >= 80) {
+        remarkEmoji.innerHTML = "🤩";
+        percentBox.style.color = "limegreen";
+    } else if (scorePercent >= 70 && scorePercent < 80) {
+        remarkEmoji.innerHTML = "🥳";
+        percentBox.style.color = "lime";
+
+    } else if (scorePercent >= 60 && scorePercent < 70) {
+        remarkEmoji.innerHTML = "👏"; // Change this emoji
+
+    } else if (scorePercent >= 50 && scorePercent < 60) {
+        remarkEmoji.innerHTML = "👍";
+        percentBox.style.color = "yeelow";
+        
+    } else if (scorePercent < 50 && scorePercent > 39) {
+        remarkEmoji.innerHTML = "😕";
+        percentBox.style.color = "crimson";
+
+    } 
+    if (scorePercent <= 39 && scorePercent > 0) {
+        remarkEmoji.innerHTML = "😳";
+        percentBox.style.color = "crimson";
+
+    }
+    else if (scorePercent === 0) {
+        remarkEmoji.innerHTML = "🤐";
+        percentBox.style.color = "crimson";
+
+    } else if (scorePercent === 100) {
+        remarkEmoji.innerHTML = "💯";
+        percentBox.style.color = "lightgreen";
+
+    }
+}
 function gameFunction() {
     changeQuestion();
     optionA.addEventListener("click", () => checkAnswer(0));
@@ -111,125 +185,84 @@ function gameFunction() {
     optionD.addEventListener("click", () => checkAnswer(3));
 
 }
+function toggleOptionPanelClickEvents()
+{
+    //this prevent users from queueing the same timer multiple times by clickign on answers repeatedly
+    optionPanelPointerEventEnabled = !optionPanelPointerEventEnabled;
+    
+    optionPanel.style.pointerEvents = optionPanelPointerEventEnabled? "initial": "none";
+}
 
 // function will change questions and options
 function changeQuestion() {
+    toggleOptionPanelClickEvents();
     questionIndex = Math.floor(Math.random()*questionArray.length);
-        if (questionsAsked.includes(questionIndex)) {
-            changeQuestion();
-        }
-        else{
-            questionsAsked.push(questionIndex);
-            question.innerHTML = questionArray[questionIndex]; //change question text
-            // change option text
-            optionA.innerHTML = mcqArray[questionIndex][0];
-            optionB.innerHTML = mcqArray[questionIndex][1];
-            optionC.innerHTML = mcqArray[questionIndex][2];
-            optionD.innerHTML = mcqArray[questionIndex][3];
+    
+    if(questionsAsked.length < questionArray.length )
+    {        
+        while(questionsAsked.includes(questionIndex))
+        {
+            questionIndex = Math.floor(Math.random()*questionArray.length);
         }
         
+        questionsAsked.push(questionIndex);
+        updateQuestionsAskedElement(questionsAsked.length)
+        question.innerHTML = questionArray[questionIndex]; //change question text
+        // change option text
+        optionA.innerHTML = mcqArray[questionIndex][0];
+        optionB.innerHTML = mcqArray[questionIndex][1];
+        optionC.innerHTML = mcqArray[questionIndex][2];
+        optionD.innerHTML = mcqArray[questionIndex][3];
+
         questionCount++;
-        if (questionCount > questionArray.length) {
-            gameEndPanel.style.display = "flex";
-            gameScoreBox.innerHTML = `${score}`;
-            scorePercent = ((score/totalScore) * (100));
-            percentBox.innerHTML = `( ${scorePercent}% )`;
-            
-            if (scorePercent >= 80) {
-                remarkEmoji.innerHTML = "🤩";
-                percentBox.style.color = "limegreen";
-            } else if (scorePercent >= 70 && scorePercent < 80) {
-                remarkEmoji.innerHTML = "🥳";
-                percentBox.style.color = "lime";
-
-            } else if (scorePercent >= 60 && scorePercent < 70) {
-                remarkEmoji.innerHTML = "👏"; // Change this emoji
-
-            } else if (scorePercent >= 50 && scorePercent < 60) {
-                remarkEmoji.innerHTML = "👍";
-                percentBox.style.color = "yeelow";
-                
-            } else if (scorePercent < 50 && scorePercent > 39) {
-                remarkEmoji.innerHTML = "😕";
-                percentBox.style.color = "crimson";
-
-            } if (scorePercent <= 39 && scorePercent > 0) {
-                remarkEmoji.innerHTML = "😳";
-                percentBox.style.color = "crimson";
-
-            }
-            } else if (scorePercent == 0) {
-                remarkEmoji.innerHTML = "🤐";
-                percentBox.style.color = "crimson";
-
-            } else if (scorePercent == 100) {
-                remarkEmoji.innerHTML = "💯";
-                percentBox.style.color = "lightgreen";
-
-            }
-            
-        }
+        
+        updateQuestionCountElement(questionCount);
+        //this is what determines when the game is finished
+        if (questionCount > questionArray.length -1) showGameOverScreen(); 
+        calculateTheFinalScore();        
+    }else{        
+        updateQuestionsAskedElement(questionsAsked.length);
+    }     
+}
 
 // function will check whether the answer selected by user is right or not.
 function checkAnswer(userIndex) {
-
-        // make the right answer green
-    if (key[questionIndex] == 0) {
-        optionA.classList.add("right-option");
-
-    }
-
-    else if (key[questionIndex] == 1) {
-        optionB.classList.add("right-option");
-
-    }
-
-    else if (key[questionIndex] == 2) {
-        optionC.classList.add("right-option");
-
-    }
-
-    else if (key[questionIndex] == 3) {
-        optionD.classList.add("right-option");
-
-    }
+    // make the right answer green
+    toggleOptionPanelClickEvents();
+    switch(key[questionIndex])
+    {
+        case 0: optionA.classList.add("right-option"); break;
+        case 1: optionB.classList.add("right-option"); break;
+        case 2: optionC.classList.add("right-option"); break;            
+        case 3: optionD.classList.add("right-option"); break;           
+    }    
+    const waitTimeBeforeTheNextQuestion = 200;
 
     //if anser is correct
-    if (key[questionIndex] == userIndex) {
+    if (key[questionIndex] === userIndex) {
         score+=10;
         scoreSection.innerHTML = score;
-
         setTimeout(function(){
             changeQuestion();
-        },200);
+        },waitTimeBeforeTheNextQuestion);
     }
     else{ //if answer is not correct
         
-        if (userIndex == 0) {
+        if (userIndex === 0) {
             optionA.classList.add("wrong-option");
-
         }
-
-        else if (userIndex == 1) {
+        else if (userIndex === 1) {
             optionB.classList.add("wrong-option");
-
         }
-
-        else if (userIndex == 2) {
+        else if (userIndex === 2) {
             optionC.classList.add("wrong-option");
-
         }
-
-        else if (userIndex == 3) {
+        else if (userIndex === 3) {
             optionD.classList.add("wrong-option");
-
         }
-
         setTimeout(function(){
             changeQuestion();
-        },200);
-       
-
+        },waitTimeBeforeTheNextQuestion); 
     }
 }
 
@@ -237,7 +270,6 @@ function checkAnswer(userIndex) {
 function selectTheme() {
     let themeIndex = Math.floor(Math.random()*themeColorArray.length);
     let themeColor = themeColorArray[themeIndex];
-
     gameScreen.style.backgroundColor = themeColor;
 }
 
@@ -245,13 +277,18 @@ function selectTheme() {
 // click start button on menu screen to perform
 startBtn.addEventListener("click",() => {
     mainScreen.style.display = "none";
+    toggleOptionPanelClickEvents();
 });
 
 // click on restart button to restart game
 restartBtn.addEventListener("click", () => {
-    gameFunction();
+    // gameFunction();
+    selectTheme();
     score = 0;
     questionCount = 0;
+    updateQuestionCountElement(questionCount);
+    questionsAsked.length = 0;
+    updateQuestionsAskedElement(questionsAsked.length)
     scoreSection.innerHTML = score;
     gameEndPanel.style.display = "none";
 });

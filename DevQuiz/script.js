@@ -218,11 +218,8 @@ function changeQuestion() {
         
         updateQuestionCountElement(questionCount);
         //this is what determines when the game is finished
-        if (questionCount > questionArray.length -1) {
-            showGameOverScreen();          
-        }
-        calculateTheFinalScore();
-        
+        if (questionCount > questionArray.length -1) showGameOverScreen(); 
+        calculateTheFinalScore();        
     }else{        
         updateQuestionsAskedElement(questionsAsked.length);
     }     
@@ -234,19 +231,10 @@ function checkAnswer(userIndex) {
     toggleOptionPanelClickEvents();
     switch(key[questionIndex])
     {
-        case 0:
-            optionA.classList.add("right-option");
-            break;
-        case 1: 
-            optionB.classList.add("right-option");
-            break;
-        case 2:
-            optionC.classList.add("right-option"); 
-            break;
-            
-        case 3:            
-            optionD.classList.add("right-option"); 
-            break;
+        case 0: optionA.classList.add("right-option"); break;
+        case 1: optionB.classList.add("right-option"); break;
+        case 2: optionC.classList.add("right-option"); break;            
+        case 3: optionD.classList.add("right-option"); break;           
     }    
     const waitTimeBeforeTheNextQuestion = 200;
 
@@ -261,22 +249,16 @@ function checkAnswer(userIndex) {
     else{ //if answer is not correct
         
         if (userIndex === 0) {
-            optionA.classList.add("wrong-option");            
-            // optionA.style.borderColor = "limegreen";
-            print("clickedA");
+            optionA.classList.add("wrong-option");
         }
         else if (userIndex === 1) {
-            optionB.classList.add("wrong-option");            
-            print("clickedB");
+            optionB.classList.add("wrong-option");
         }
         else if (userIndex === 2) {
-            optionC.classList.add("wrong-option");            
-            print("rightC");
+            optionC.classList.add("wrong-option");
         }
         else if (userIndex === 3) {
-            optionD.classList.add("wrong-option");            
-            print("rightD");
-
+            optionD.classList.add("wrong-option");
         }
         setTimeout(function(){
             changeQuestion();

@@ -195,6 +195,10 @@ function toggleOptionPanelClickEvents()
 
 // function will change questions and options
 function changeQuestion() {
+    optionA.classList.remove("right-option", "wrong-option");
+    optionB.classList.remove("right-option", "wrong-option");
+    optionC.classList.remove("right-option", "wrong-option");
+    optionD.classList.remove("right-option", "wrong-option");
     toggleOptionPanelClickEvents();
     questionIndex = Math.floor(Math.random()*questionArray.length);
     
@@ -236,8 +240,7 @@ function checkAnswer(userIndex) {
         case 2: optionC.classList.add("right-option"); break;            
         case 3: optionD.classList.add("right-option"); break;           
     }    
-    const waitTimeBeforeTheNextQuestion = 200;
-
+    const waitTimeBeforeTheNextQuestion = 500;
     //if anser is correct
     if (key[questionIndex] === userIndex) {
         score+=10;

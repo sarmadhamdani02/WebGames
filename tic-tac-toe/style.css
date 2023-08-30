@@ -37,7 +37,7 @@ body{
     color: transparent;
     font-size: 5vw;
     font-family: 'Play', sans-serif;
-    
+
 }
 
 .win-screen h1 .winner{
@@ -72,7 +72,7 @@ body{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 2vh;    
+    gap: 2vh;
 }
 
 .title-screen .title h1{
@@ -101,10 +101,10 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
-    
+
 }
 .video-game-button {
-    
+
     cursor: pointer;
     outline: none;
     border: 0;
@@ -303,22 +303,22 @@ body{
 
 .game-panel:hover{
     background-color: rgb(28, 78, 228);
-    
+
 }
 
 .game-panel:active{
     background-color: transparent;
-    
+
 }
 
 @media (max-width:600px) {
-    
-    
+
+
     .title-screen .title{
         margin-top: 15vh;
         font-size: 3.3vw;
     }
-    
+
     .title-screen .title h3{
         font-size: 7vw;
     }
@@ -349,7 +349,7 @@ body{
     .main h1 .player{
         font-size: 15vw;
     }
-  
+
     .win-screen h1{
         font-size: 8vw;
         display: flex;
@@ -366,5 +366,11 @@ body{
     .win-screen h1 .winner{
         font-size: 8vw;
     }
+
+    #win-msg {
+        display: flex;
+    }
+
+
 
 }

@@ -436,11 +436,35 @@ function check() {
   ) {
     document.getElementById("win-msg").hidden = false;
     document.getElementById("draw-msg").hidden = true;
+
+    var elemento = document.getElementById("win-msg");
+    elemento.style.display = "block";
+    var elemento = document.getElementById("draw-msg");
+    elemento.style.display = "none";
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      var elemento = document.getElementById("win-msg");
+      elemento.style.display = "flex";
+    }
+
+
+
     return false;
   } else if (count == 8) {
     winScreen.style.display = "flex";
     document.getElementById("draw-msg").hidden = false;
     document.getElementById("win-msg").hidden = true;
+
+
+    var elemento = document.getElementById("win-msg");
+    elemento.style.display = "none";
+    var elemento = document.getElementById("draw-msg");
+    elemento.style.display = "block";
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      // Viewport is less or equal to 700 pixels wide
+    }
+
+
+
   } else {
     return true;
   }

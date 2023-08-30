@@ -53,42 +53,30 @@
           ></a>
         </button>
 
-        <div id="dark-mode">
-          <p class="nav-item">Dark Mode</p>
-          <label class="switch">
-            <input
-              type="checkbox"
-              id="toggle"
-              onclick="onToggleDarkMode()" /><span class="slider"></span>
-          </label>
-        </div>
+        <button onclick="onToggleDarkMode()">
+          <p class="nav-item">Dark Mode<i id="dark-mode-icon" class="fa-solid fa-moon"></i></p>
+        </button>
       </div>
 
       <div class="side-bar-menu" id="side-bar-menu">
         <div class="side-bar-link">
           <a
-            class=""
+            class="nav-item"
             href="https://github.com/sarmadhamdani02/webGames"
             target="_blank"
-            >contribute <i class="fa-brands fa-github nav-item"></i>
+            >Contribute <i class="fa-brands fa-github nav-item"></i>
           </a>
 
           <a
-            class=""
+            class="nav-item"
             href="https://github.com/sarmadhamdani02/webGames#readme"
             target="_blank"
             >About <i class="fa-solid fa-circle-info nav-item"></i>
           </a>
 
-          <div id="dark-mode-sidebar">
-            <p class="">Dark Mode</p>
-            <label class="switch">
-              <input
-                type="checkbox"
-                id="dark-mode-toggle-sidebar"
-                onclick="onSideToggleDarkMode()" /><span class="slider"></span>
-            </label>
-          </div>
+          <button id="dark-mode-sidebar" onclick="onToggleDarkMode()">
+            <p class="nav-item">Dark Mode<i id="sidebar-dark-mode-icon" class="fa-solid fa-moon"></i></p>
+          </button>
         </div>
       </div>
 

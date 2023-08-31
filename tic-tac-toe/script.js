@@ -434,13 +434,22 @@ function check() {
       panel[2].innerText == panel[4].innerText &&
       panel[4].innerText == panel[6].innerText)
   ) {
-    document.getElementById("win-msg").hidden = false;
-    document.getElementById("draw-msg").hidden = true;
+
+    document.getElementById("win-msg").style.display = "block";
+    document.getElementById("draw-msg").style.display = "none";
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      document.getElementById("win-msg").style.display = "flex";
+    }
+
     return false;
   } else if (count == 8) {
     winScreen.style.display = "flex";
-    document.getElementById("draw-msg").hidden = false;
-    document.getElementById("win-msg").hidden = true;
+    document.getElementById("draw-msg").style.display = "block";
+    document.getElementById("win-msg").style.display = "none";
+    if (window.matchMedia("(max-width: 600px)").matches) {
+      document.getElementById("draw-msg").style.display = "flex";
+    }
+
   } else {
     return true;
   }

@@ -306,12 +306,12 @@ body{
     animation: output-anime 800ms linear infinite;
 }
 
-.right-option{
+.option-panel .right-option{
     color: limegreen;
     border: 1px solid limegreen;
 }
 
-.wrong-option{
+.option-panel .wrong-option{
     color: crimson;
     border: 1px solid crimson;
 }

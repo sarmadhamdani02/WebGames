@@ -401,3 +401,40 @@ body{
 
 }
 
+/* adding media query for other devices */
+@media all and (max-width: 720px) {
+    .game-panel {
+      height: 80%;
+    }
+    .option-panel .options{
+        
+        height: 100%;
+        text-align: center;
+        padding: 3px;
+       width: 100%;
+       overflow: auto;
+       
+    }
+    .option-panel {
+        height: 100%;
+    }
+    .game-screen {
+        width: 100%;
+    }
+    body, .option-panel {
+    overflow: auto;
+    }
+  
+  }
+  
+@media all and (max-width: 900px) {
+    .option-panel {
+        height: 100%;
+       margin-top: -50px;
+        }
+    .option-panel .options {
+         text-align: center;
+         padding: 5px;
+         width: 50%;
+            }
+}

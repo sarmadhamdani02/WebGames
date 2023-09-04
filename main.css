@@ -261,3 +261,16 @@ body {
     color: white;
   }
 }
+.main-content, .nav-bar {
+  width: 100%;
+  overflow: hidden;
+}
+
+/* add media query for andriod device */
+/* @media all and (max-width: 700px) {
+  .nav-bar {
+    width: 100%;
+  }
+} */
+
+

@@ -40,6 +40,10 @@ startBtn.addEventListener("click", function () {
   tl.to("titleScreen", {
     display: "none",
   });
+
+  gsap.to(".win-screen", {
+    y: "-100vh",
+  })
 });
 
 panel[0].addEventListener("click", () => {

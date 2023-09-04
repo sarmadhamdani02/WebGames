@@ -182,7 +182,8 @@ body{
     /* backdrop-filter: blur(5px); */
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    /* height: 75vh; */
+    height: fit-content;
     width: 70vw;
     border: 1px solid white;
     border-radius: 10px;
@@ -271,7 +272,7 @@ body{
     height: 75vh;
     position: absolute;
     backdrop-filter: blur(3px);
-    left: 21vw;
+    left: 21vw;  
     top: 12vh;
     z-index: 12;
     transition: 400ms;
@@ -360,6 +361,8 @@ body{
     
     .main-screen{
         font-size: 3vw;
+     
+        
     }
 
     .main-screen .string{
@@ -395,7 +398,8 @@ body{
     
     .game-panel{
         width: 90vw;
-        height: 90vh;
+        /* height: 90vh; */
+        /* height: fit-content; */
         overflow: hidden;
         padding: 20px 10px ;
         gap: 40px;
@@ -411,6 +415,15 @@ body{
 
         .option-panel .options{
             padding:  5px !important;
+         }
+
+
+         .game-end-panel{
+            width: 100%;
+         }
+
+         .end-result{
+            padding: 40px 30px;
          }
        
 }

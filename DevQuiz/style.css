@@ -25,10 +25,12 @@ body{
     font-size: 1.2rem;
     font-weight: 600;
     background-color: #1a1b26;
-    .question-count{
-        display: inherit;
-    }
+   
 }
+
+.question-count{
+    display: inherit;
+} 
 
 .game-instructions,
 .main-screen,
@@ -158,7 +160,9 @@ body{
     background-color: rgb(89, 14, 89);
     height: 100vh;
     width: 100vw;
+    
     flex-direction: column;
+   
 }
 
 .game-screen .score-panel{
@@ -178,24 +182,26 @@ body{
     /* backdrop-filter: blur(5px); */
     display: flex;
     flex-direction: column;
-    height: 75vh;
+    /* height: 75vh; */
+    height: fit-content;
     width: 70vw;
     border: 1px solid white;
     border-radius: 10px;
     gap: 80px;
+     /* gap: 40px; */
 }
 
 .question-panel{
     padding: 0 10px;
     text-align: center;
-    margin-top: 50px;
+    margin-top: 20px;
     color: white;
     font-family: 'Slabo 13px', serif;
     font-size: clamp(0.5rem, 1.2vw,5rem);
 }
 
 .option-panel{
-    padding: 0 60px;
+    padding: 0 20px;
     display: flex;
     flex-direction: column;
     gap: 8px;
@@ -208,7 +214,7 @@ body{
     background-color: transparent;
     border: 1px solid rgba(255, 255, 255, 0.800);
     border-radius: 5px;
-    padding: 10px 60px;
+    padding: 10px 20px;
     color: white;
     cursor: pointer;
     word-wrap: nowrap;
@@ -266,7 +272,7 @@ body{
     height: 75vh;
     position: absolute;
     backdrop-filter: blur(3px);
-    left: 21vw;
+    left: 21vw;  
     top: 12vh;
     z-index: 12;
     transition: 400ms;
@@ -355,6 +361,8 @@ body{
     
     .main-screen{
         font-size: 3vw;
+     
+        
     }
 
     .main-screen .string{
@@ -390,14 +398,33 @@ body{
     
     .game-panel{
         width: 90vw;
-        height: 60vh;
+        /* height: 90vh; */
+        /* height: fit-content; */
         overflow: hidden;
         padding: 20px 10px ;
+        gap: 40px;
     }
     
         .game-panel .score-panel{
             font-size: 7vw;
         }
 
+        .option-panel{
+           padding: 0 !important;
+        }
+
+        .option-panel .options{
+            padding:  5px !important;
+         }
+
+
+         .game-end-panel{
+            width: 100%;
+         }
+
+         .end-result{
+            padding: 40px 30px;
+         }
+       
 }
 

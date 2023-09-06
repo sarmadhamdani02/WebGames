@@ -425,6 +425,18 @@ body{
          .end-result{
             padding: 40px 30px;
          }
+
+      .game-screen .score-panel{
+            font-size: 5vw;
+            margin-left: 72vw;
+           
+           
+        }
+
+        .game-screen .score-panel .score{
+            font-size: 5vw;
+           
+        }
        
 }
 

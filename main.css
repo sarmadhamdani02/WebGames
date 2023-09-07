@@ -140,6 +140,9 @@ body {
   scale: 1.1;
   outline: 1.5px solid #009090;
 }
+.main-content, .nav-bar {
+  overflow: hidden;
+}
 
 .game img {
   background-size: cover;
@@ -170,6 +173,8 @@ body {
   color: #111111;
 }
 
+
+
 @media (max-width: 700px) {
   body {
     overflow-x: hidden;
@@ -188,7 +193,6 @@ body {
   }
 
   .nav-bar .nav-elem {
-    margin-left: 13vw;
     display: none;
     align-items: center;
     justify-content: center;
@@ -261,10 +265,25 @@ body {
     color: white;
   }
 }
-.main-content, .nav-bar {
-  width: 100%;
-  overflow: hidden;
+
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .nav-bar {
+    padding: 0 2vw;
+    height: 60px; 
+  }
+
+  .nav-bar .nav-elem {
+    margin-left: 2vw; 
+  }
+
+  .nav-bar button {
+    font-size: 18px;
+    padding: 10px 15px; 
+  }
 }
+
+
 
 /* add media query for andriod device */
 /* @media all and (max-width: 700px) {

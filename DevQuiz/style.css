@@ -212,7 +212,7 @@ body{
     text-align: center;
     font-family: 'M PLUS 1 Code', sans-serif;
     background-color: transparent;
-    border: 1px solid rgba(255, 255, 255, 0.800);
+    border: 2px solid rgba(255, 255, 255, 0.800);
     border-radius: 5px;
     padding: 10px 20px;
     color: white;
@@ -313,13 +313,13 @@ body{
 }
 
 .option-panel .right-option{
-    color: limegreen;
-    border: 1px solid limegreen;
+    background:limegreen;
+    text-shadow: 1px 1px 3px black;
 }
 
 .option-panel .wrong-option{
-    color: crimson;
-    border: 1px solid crimson;
+    background: crimson;
+    text-shadow: 1px 1px 3px black;
 }
 
 @keyframes output-anime {

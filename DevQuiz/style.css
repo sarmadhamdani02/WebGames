@@ -469,7 +469,7 @@ body{
 @media all and (max-width: 900px) {
     .option-panel {
         height: 100%;
-       margin-top: -50px;
+/*        margin-top: -50px; */
         }
     .option-panel .options {
          text-align: center;

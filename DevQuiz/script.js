@@ -78,7 +78,8 @@ const questionArray = [
     "What does the acronym CRUD stand for in the context of databases?",
     "What is the significance of the 'this' keyword in JavaScript?",
     "Which method is used to schedule a function to run after a certain delay?",
-    "What is the difference between 'null' and 'undefined' in JavaScript?"
+    "What is the difference between 'null' and 'undefined' in JavaScript?",
+    "What does the NaN value represent in JavaScript?"
   ];
   
   updateQuestionsArrayLengthElement(questionArray.length)
@@ -108,11 +109,12 @@ const mcqArray = [
     ["Compile, Run, Upload, Debug", "Update, Read, Create, Delete", "Control, Repeat, Undo, Draw", "Copy, Resize, Underline, Delete"],
     ["It refers to the previous function's scope", "It refers to the current function's scope", "It refers to the parent element's scope", "It refers to the global scope"],
     ["setInterval()", "wait()", "delay()", "setTimeout()"],
-    ["'undefined' and 'null' can be used interchangeably", "'undefined' is an intentional absence of value, while 'null' indicates a variable that has been declared but not assigned a value", "'null' is an intentional absence of value, while 'undefined' indicates a variable that has been declared but not assigned a value", "'null' is the same as 'undefined'"]
+    ["'undefined' and 'null' can be used interchangeably", "'undefined' is an intentional absence of value, while 'null' indicates a variable that has been declared but not assigned a value", "'null' is an intentional absence of value, while 'undefined' indicates a variable that has been declared but not assigned a value", "'null' is the same as 'undefined'"],
+    ["Not-a-Number", "Null", "Negative", "No value"]
 ];
 
 //   answer key
-const key = [3, 1, 0, 3, 2, 2, 1, 3, 1, 2, 0, 0, 2, 0, 1, 0, 1, 0, 3, 2];
+const key = [3, 1, 0, 3, 2, 2, 1, 3, 1, 2, 0, 0, 2, 0, 1, 0, 1, 0, 3, 2, 1];
 
 
 //   array contains the background colors

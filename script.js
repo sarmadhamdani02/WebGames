@@ -7,12 +7,14 @@ const gameIcon = document.getElementsByClassName("game");
 const sideBar = document.getElementById("side-bar-menu");
 const darkModeIcon = document.getElementById("dark-mode-icon");
 const sidebarDarkModeIcon = document.getElementById("sidebar-dark-mode-icon");
-const textIcon = document.getElementById("text-icon")
+const textIcon = document.getElementById("text-icon");
 const spanText = textIcon.getElementsByTagName("span");
-
+const sideTextIcon = document.getElementById("side-text-icon");
+const sideSpanText = sideTextIcon.getElementsByTagName("span");
 const onToggleDarkMode = () => {
   if (darkModeIcon.classList.contains('fa-moon')) {
-    spanText[0].innerHTML = "Light Mode"
+    spanText[0].innerHTML = "Light Mode";
+    sideSpanText[0].innerHTML = "Light Mode";
     mainContent[0].style.backgroundColor = "#15202B";
     sideBar.style.backgroundColor = "rgb(1, 125, 63)";
     for (let i = 0; i < gameText.length; i++) {
@@ -30,7 +32,8 @@ const onToggleDarkMode = () => {
     sidebarDarkModeIcon.className = "fa-solid fa-sun";
   }
   else {
-    spanText[0].innerHTML = "Dark Mode"
+    spanText[0].innerHTML = "Dark Mode";
+    sideSpanText[0].innerHTML = "Dark Mode";
     mainContent[0].style.backgroundColor = "white";
     sideBar.style.backgroundColor = "rgb(0, 144, 72) ";
     for (let i = 0; i < gameText.length; i++) {

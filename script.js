@@ -7,9 +7,12 @@ const gameIcon = document.getElementsByClassName("game");
 const sideBar = document.getElementById("side-bar-menu");
 const darkModeIcon = document.getElementById("dark-mode-icon");
 const sidebarDarkModeIcon = document.getElementById("sidebar-dark-mode-icon");
+const textIcon = document.getElementById("text-icon")
+const spanText = textIcon.getElementsByTagName("span");
 
 const onToggleDarkMode = () => {
   if (darkModeIcon.classList.contains('fa-moon')) {
+    spanText[0].innerHTML = "Light Mode"
     mainContent[0].style.backgroundColor = "#15202B";
     sideBar.style.backgroundColor = "rgb(1, 125, 63)";
     for (let i = 0; i < gameText.length; i++) {
@@ -18,7 +21,6 @@ const onToggleDarkMode = () => {
     for (let i = 0; i < gameIcon.length; i++) {
       gameIcon[i].style.setProperty("--game-icon-hover-color", "#22303C");
     }
-
     navBar[0].style.backgroundColor = "#03DAC5";
     navBar[0].style.color = "#212628";
     for (let i = 0; i < navItem.length; i++) {
@@ -28,6 +30,7 @@ const onToggleDarkMode = () => {
     sidebarDarkModeIcon.className = "fa-solid fa-sun";
   }
   else {
+    spanText[0].innerHTML = "Dark Mode"
     mainContent[0].style.backgroundColor = "white";
     sideBar.style.backgroundColor = "rgb(0, 144, 72) ";
     for (let i = 0; i < gameText.length; i++) {

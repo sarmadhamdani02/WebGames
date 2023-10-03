@@ -101,10 +101,10 @@ body {
 }
 
 .main-content {
+  background-image: url("./assets/main_background_light.jpg");
   overflow: hidden;
   height: 100vh;
   width: 100vw;
-  background-color: white;
   display: flex;
   align-items: start;
   justify-content: start;
@@ -128,6 +128,9 @@ body {
   width: 12vw;
   cursor: pointer;
   overflow: hidden;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-style: solid;
+  border-color: palevioletred;
 }
 
 .main-content .game:hover {
@@ -139,6 +142,8 @@ body {
   /* rotate: 3deg; */
   scale: 1.1;
   outline: 1.5px solid #009090;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
 }
 .main-content, .nav-bar {
   overflow: hidden;
@@ -283,13 +288,9 @@ body {
   }
 }
 
-
-
 /* add media query for andriod device */
 /* @media all and (max-width: 700px) {
   .nav-bar {
     width: 100%;
   }
 } */
-
-

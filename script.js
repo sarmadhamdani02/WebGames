@@ -13,6 +13,7 @@ const sideTextIcon = document.getElementById("side-text-icon");
 const sideSpanText = sideTextIcon.getElementsByTagName("span");
 const onToggleDarkMode = () => {
   if (darkModeIcon.classList.contains('fa-moon')) {
+    mainContent[0].style.backgroundImage = "url('./assets/main_background_dark.jpg')";
     spanText[0].innerHTML = "Light Mode";
     sideSpanText[0].innerHTML = "Light Mode";
     mainContent[0].style.backgroundColor = "#15202B";
@@ -35,6 +36,8 @@ const onToggleDarkMode = () => {
     spanText[0].innerHTML = "Dark Mode";
     sideSpanText[0].innerHTML = "Dark Mode";
     mainContent[0].style.backgroundColor = "white";
+    mainContent[0].style.backgroundImage = "url('./assets/main_background_light.jpg')";
+
     sideBar.style.backgroundColor = "rgb(0, 144, 72) ";
     for (let i = 0; i < gameText.length; i++) {
       gameText[i].style.color = "#333333";

@@ -461,6 +461,7 @@ function check() {
 
 function randomColor() {
   // random color for the better user experience.
+  //change this to be different images
   let randomBackgroundColor = [
     "#474E68",
     "lightCoral",
@@ -468,13 +469,28 @@ function randomColor() {
     "rgb(95, 135, 255)",
   ];
 
+  let randomBackgroundImage = [
+    "./backgrounds/cave.jpg",
+    "./backgrounds/city.jpg",
+    "./backgrounds/cliffside.jpg",
+    "./backgrounds/cloudy-night.jpg",
+    "./backgrounds/forest.jpg",
+    "./backgrounds/outdoor.jpg",
+    "./backgrounds/planets.jpg",
+    "./backgrounds/Space-background.png",
+    "./backgrounds/sunset.jpg",
+    "./backgrounds/tree.jpg"
+
+  ]
+
   // random number to get the random color as desired
-  let randomNumber = Math.floor(Math.random() * 4);
+  //select random images instead. Eventually make a menu for this.
+  let randomNumber = Math.floor(Math.random() * 10);
 
   // target the main container
   let targetMain = document.querySelector(".main");
 
-  targetMain.style.backgroundColor = randomBackgroundColor[randomNumber];
+  targetMain.style.backgroundImage = `url(${randomBackgroundImage[randomNumber]})`;//apply image here
 
   //method for the entire layout of the game according to the main background color
   layoutColor(targetMain.style.backgroundColor);
@@ -485,6 +501,7 @@ let targetGameContainer = document.querySelector(".game-container");
 let targetGamePanel = Array.from(document.querySelectorAll(".game-panel"));
 
 // layoutColor sets the layout color in the synchronous format to make the theme color ideal
+//adapt these to the different themes
 function layoutColor(backgroundColor) {
   console.log(backgroundColor);
   if (backgroundColor === "rgb(71, 78, 104)") {
@@ -581,6 +598,8 @@ function layoutColor(backgroundColor) {
     });
   }
 }
+
+//change the fonts to appropriate themes
 
 // targeting the restart-button.
 restartBtn.addEventListener("click", randomColor);

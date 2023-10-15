@@ -31,7 +31,7 @@ gsap.from(".player", {
 startBtn.addEventListener("click", function () {
   turnHead.style.display = "flex";
   turnName.innerHTML = "O";
-  randomColor();
+  randomTheme();
 
   tl.to(".title-screen", {
     x: -300,
@@ -460,16 +460,8 @@ function check() {
   }
 }
 
-function randomColor() {
-  // random color for the better user experience.
-  //change this to be different images
-  let randomBackgroundColor = [
-    "#474E68",
-    "lightCoral",
-    "#8D72E1",
-    "rgb(95, 135, 255)",
-  ];
-
+function randomTheme() {
+  // random image picks a theme for the better user experience.
   let randomBackgroundImage = [
     "./backgrounds/cave.jpg",
     "./backgrounds/city.jpg",
@@ -484,15 +476,14 @@ function randomColor() {
 
   ]
 
-  // random number to get the random color as desired
-  //select random images instead. Eventually make a menu for this.
+  // random number to get the random theme as desired
   let randomNumber = Math.floor(Math.random() * 10);
 
   // target the main container
   let targetMain = document.querySelector(".main");
-
-  targetMain.style.backgroundImage = `url(${randomBackgroundImage[randomNumber]})`;//apply image here
-
+  
+  //set the random background image
+  targetMain.style.backgroundImage = `url(${randomBackgroundImage[randomNumber]})`;
   //method for the entire layout of the game according to the main background color
   layoutColor(targetMain.style.backgroundColor);
 }
@@ -502,7 +493,7 @@ let targetGameContainer = document.querySelector(".game-container");
 let targetGamePanel = Array.from(document.querySelectorAll(".game-panel"));
 
 // layoutColor sets the layout color in the synchronous format to make the theme color ideal
-//adapt these to the different themes
+//currently not linked to the themes
 function layoutColor(backgroundColor) {
   console.log(backgroundColor);
   if (backgroundColor === "rgb(71, 78, 104)") {
@@ -600,9 +591,8 @@ function layoutColor(backgroundColor) {
   }
 }
 
-//change the fonts to appropriate themes
 
 // targeting the restart-button.
-restartBtn.addEventListener("click", randomColor);
+restartBtn.addEventListener("click", randomTheme);
 
 

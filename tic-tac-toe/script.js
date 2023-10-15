@@ -31,6 +31,7 @@ gsap.from(".player", {
 startBtn.addEventListener("click", function () {
   turnHead.style.display = "flex";
   turnName.innerHTML = "O";
+  randomColor();
 
   tl.to(".title-screen", {
     x: -300,

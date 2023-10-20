@@ -139,7 +139,7 @@ function showGameOverScreen()
 {
     gameEndPanel.style.display = "flex";
     gameScoreBox.innerHTML = `${score}`;
-    scorePercent = ((score/totalScore) * (100));
+    scorePercent = Math.trunc((score/totalScore) * (100));
     percentBox.innerHTML = `( ${scorePercent}% )`; 
 }
 function calculateTheFinalScore()

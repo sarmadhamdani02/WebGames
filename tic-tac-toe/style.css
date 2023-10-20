@@ -6,9 +6,12 @@
 
 body{
     font-family: sans-serif;
+   
 }
 
-
+.main {
+    background-size: cover;
+}
 .win-screen{
     color: white;
     backdrop-filter: blur(3px);

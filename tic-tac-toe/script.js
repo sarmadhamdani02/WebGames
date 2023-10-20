@@ -31,6 +31,7 @@ gsap.from(".player", {
 startBtn.addEventListener("click", function () {
   turnHead.style.display = "flex";
   turnName.innerHTML = "O";
+  randomTheme();
 
   tl.to(".title-screen", {
     x: -300,
@@ -459,25 +460,32 @@ function check() {
   }
 }
 
-function randomColor() {
-  // random color for the better user experience.
-  let randomBackgroundColor = [
-    "#474E68",
-    "lightCoral",
-    "#8D72E1",
-    "rgb(95, 135, 255)",
-  ];
+function randomTheme() {
+  // random image picks a theme for the better user experience.
+  let randomBackgroundImage = [
+    "./backgrounds/cave.jpg",
+    "./backgrounds/city.jpg",
+    "./backgrounds/cliffside.jpg",
+    "./backgrounds/cloudy-night.jpg",
+    "./backgrounds/forest.jpg",
+    "./backgrounds/outdoor.jpg",
+    "./backgrounds/planets.jpg",
+    "./backgrounds/Space-background.png",
+    "./backgrounds/sunset.jpg",
+    "./backgrounds/tree.jpg"
 
-  // random number to get the random color as desired
-  let randomNumber = Math.floor(Math.random() * 4);
+  ]
+
+  // random number to get the random theme as desired
+  let randomNumber = Math.floor(Math.random() * 10);
 
   // target the main container
   let targetMain = document.querySelector(".main");
-
-  targetMain.style.backgroundColor = randomBackgroundColor[randomNumber];
-
+  
+  //set the random background image
+  targetMain.style.backgroundImage = `url(${randomBackgroundImage[randomNumber]})`;
   //method for the entire layout of the game according to the main background color
-  layoutColor(targetMain.style.backgroundColor);
+  layoutColor(randomNumber);
 }
 
 // first targeting all the necessary points.
@@ -485,11 +493,10 @@ let targetGameContainer = document.querySelector(".game-container");
 let targetGamePanel = Array.from(document.querySelectorAll(".game-panel"));
 
 // layoutColor sets the layout color in the synchronous format to make the theme color ideal
-function layoutColor(backgroundColor) {
-  console.log(backgroundColor);
-  if (backgroundColor === "rgb(71, 78, 104)") {
+function layoutColor(randomNumber) {
+  if (randomNumber === 0) {
     // targeting the game container tag.
-    targetGameContainer.style.backgroundColor = "#61678A";
+    targetGameContainer.style.backgroundColor = "rgba(133,162,194,0.2)";
 
     targetGamePanel.forEach(function (elem) {
       elem.style.borderColor = "white";
@@ -497,7 +504,7 @@ function layoutColor(backgroundColor) {
     // targeting the individual box for hover
     targetGamePanel.forEach((elem) => {
       elem.addEventListener("mouseover", function () {
-        elem.style.backgroundColor = "#252B48";
+        elem.style.backgroundColor = "rgba(133,162,194, 0.8)";
       });
 
       elem.addEventListener("mouseleave", function () {
@@ -510,9 +517,9 @@ function layoutColor(backgroundColor) {
         elem.style.webkitTextStrokeColor = "white";
       });
     });
-  } else if (backgroundColor === "lightcoral") {
+  } else if (randomNumber === 1) {
     // targeting the game container tag.
-    targetGameContainer.style.backgroundColor = "#E48586";
+    targetGameContainer.style.backgroundColor = "rgba(255,189,163,0.2)";
 
     targetGamePanel.forEach(function (elem) {
       elem.style.borderColor = "white";
@@ -520,7 +527,7 @@ function layoutColor(backgroundColor) {
     // targeting the individual box for hover
     targetGamePanel.forEach((elem) => {
       elem.addEventListener("mouseover", function () {
-        elem.style.backgroundColor = "#FCBAAD";
+        elem.style.backgroundColor = "rgba(255,189,163,0.8)";
       });
 
       elem.addEventListener("mouseleave", function () {
@@ -533,9 +540,9 @@ function layoutColor(backgroundColor) {
         elem.style.webkitTextStrokeColor = "white";
       });
     });
-  } else if (backgroundColor === "rgb(141, 114, 225)") {
+  } else if (randomNumber === 2) {
     // targeting the game container tag.
-    targetGameContainer.style.backgroundColor = "#A66CFF";
+    targetGameContainer.style.backgroundColor = "rgba(110,166,191,0.2)";
 
     targetGamePanel.forEach(function (elem) {
       elem.style.borderColor = "white";
@@ -543,7 +550,7 @@ function layoutColor(backgroundColor) {
     // targeting the individual box for hover
     targetGamePanel.forEach((elem) => {
       elem.addEventListener("mouseover", function () {
-        elem.style.backgroundColor = "#C9A7EB";
+        elem.style.backgroundColor = "rgba(110,166,191,0.8)";
       });
 
       elem.addEventListener("mouseleave", function () {
@@ -556,9 +563,9 @@ function layoutColor(backgroundColor) {
         elem.style.webkitTextStrokeColor = "white";
       });
     });
-  }else if(backgroundColor === "rgb(95, 135, 255)"){
+  }else if(randomNumber === 3){
     // targeting the game container tag.
-    targetGameContainer.style.backgroundColor = "rgb(65, 105, 225)";
+    targetGameContainer.style.backgroundColor = "rgba(6,18,52,0.2)";
 
     targetGamePanel.forEach(function (elem) {
       elem.style.borderColor = "white";
@@ -566,7 +573,145 @@ function layoutColor(backgroundColor) {
     // targeting the individual box for hover
     targetGamePanel.forEach((elem) => {
       elem.addEventListener("mouseover", function () {
-        elem.style.backgroundColor = "rgb(28, 78, 228)";
+        elem.style.backgroundColor = "rgba(6,18,52,0.8)";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }else if(randomNumber === 4){
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "rgba(251,196,106,0.2)";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "rgba(251,196,106,0.8)";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }else if(randomNumber === 5){
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "rgba(37,107,203,0.2)";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "rgba(37,107,203,0.8)";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }else if(randomNumber === 6){
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "rgba(71,56,113,0.2)";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "rgba(71,56,113,0.8)";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }else if(randomNumber === 8){
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "rgba(0,0,0,0.2)";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "rgba(0,0,0,0.8)";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }else if(randomNumber === 8){
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "rgba(179,24,126,0.2)";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "rgba(179,24,126,0.8)";
+      });
+
+      elem.addEventListener("mouseleave", function () {
+        elem.style.backgroundColor = "";
+      });
+    });
+
+    targetGamePanel.forEach(function (elem) {
+      elem.addEventListener("click", () => {
+        elem.style.webkitTextStrokeColor = "white";
+      });
+    });
+  }else if(randomNumber === 9){
+    // targeting the game container tag.
+    targetGameContainer.style.backgroundColor = "rgba(40,55,76,0.2)";
+
+    targetGamePanel.forEach(function (elem) {
+      elem.style.borderColor = "white";
+    });
+    // targeting the individual box for hover
+    targetGamePanel.forEach((elem) => {
+      elem.addEventListener("mouseover", function () {
+        elem.style.backgroundColor = "rgba(40,55,76,0.8)";
       });
 
       elem.addEventListener("mouseleave", function () {
@@ -582,7 +727,8 @@ function layoutColor(backgroundColor) {
   }
 }
 
+
 // targeting the restart-button.
-restartBtn.addEventListener("click", randomColor);
+restartBtn.addEventListener("click", randomTheme);
 
 

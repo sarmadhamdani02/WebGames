@@ -40,6 +40,7 @@ body {
   align-items: center;
   justify-content: center;
   flex-wrap: nowrap;
+  padding: 20px;
 }
 
 .nav-bar .nav-elem button {

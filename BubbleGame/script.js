@@ -70,7 +70,7 @@ function getHighScore() {
     }
 }
 
-var time = 5;
+var time = 60;
 timerBox.innerHTML = time;
 function timeFunction() {
     var timerInterval = setInterval(() => {

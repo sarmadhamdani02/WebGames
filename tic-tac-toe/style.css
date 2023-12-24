@@ -194,6 +194,8 @@ body{
     transform-style: preserve-3d;
     -webkit-transition: background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
     transition: transform 150ms cubic-bezier(0, 0, 0.58, 1), background 150ms cubic-bezier(0, 0, 0.58, 1), -webkit-transform 150ms cubic-bezier(0, 0, 0.58, 1);
+    margin-bottom: .5em;
+    text-align: center;
 }
 
 .video-game-button-end::before {

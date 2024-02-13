@@ -95,7 +95,7 @@ body{
 }
 
 .start-btn,
-.restart-btn{
+.end-game-btn{
     background-color: transparent;
     border: 1px solid white;
     padding: 10px 25px;
@@ -107,27 +107,27 @@ body{
     font-size: 1.3vw;
 }
 
-.restart-btn{
-    margin-right: 4vw;
+.end-game-btn{
+    margin-right: 1em;
 }
 
 .start-btn:hover,
-.restart-btn:hover{
+.end-game-btn:hover{
     color: #4def74;
 }
 
 .start-btn:hover .btn-brackets,
-.restart-btn:hover .btn-brackets{
+.end-game-btn:hover .btn-brackets{
     color: #2c4f9e;
 }
 
 .start-btn:hover .btn-colon,
-.restart-btn:hover .btn-colon{
+.end-game-btn:hover .btn-colon{
     color: #5aceff;
 }
 
 .start-btn:active,
-.restart-btn:active{
+.end-game-btn:active{
     border-color: #db78a1;
 }
 
@@ -370,7 +370,7 @@ body{
     }
     
     .start-btn,
-    .restart-btn{
+    .end-game-btn{
         padding: 10px 25px;
         border-radius: 30px;
         font-size: 5vw;

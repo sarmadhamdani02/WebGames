@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<html lang="le" dir="ltr">
+<html>
+
+<head>
+    <title> SignUp and Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/log-in- sign-up.css">
+</head>
+
+<body>
+
+    <div class="container" id="container">
+        <div class="form-container sign-up-container">
+            <form id="sign" action="#">
+                <h1 style="padding-top: 15px"> Create Account</h1>
+                <input type="text" id="fname" placeholder="First Name">
+                <input type="text" id="lname" placeholder="Last Name">
+                <input type="text" id="email1" placeholder="Email Address">
+                <input type="password" id="password1" placeholder="Password">
+                <input type="text" id="phone" placeholder="Phone Number">
+                <input type="number" id="age" placeholder="Age">
+                <button style="margin-top:10px"> Create Account</button>
+                <h5>Already have an account! <a class="new" id="signIn" style="color:blue;"><u>Sign In</u></a></h5>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form id="log" action="#">
+                <h1 style="padding-bottom: 15px"> Login Now</h1>
+                <input type="email" id="email2" placeholder="Email">
+                <input type="password" id="password2" placeholder="Password">
+                <a href="#" style="padding-left:150px; font-weight: bold"> Forgot Your Password?</a>
+                <button id="passOver" style="margin-top: 10px"> Let Me In...</button>
+                <h5>New to here! <a class="new" id="signUp" style="color:blue;"><u>Sign Up</u></a></h5>
+            </form>
+
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="../images/pic2.jpg" alt="pic-2" height="480" width="500" />
+
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="../images/pic3.jpg" alt="pic-3" height="480" width="500" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../js/log-in- sign-up.js"></script>
+</body>
+
+</html>

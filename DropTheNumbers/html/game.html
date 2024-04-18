@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="../css/game.css">
+</head>
+
+<body>
+  <h1>DROP THE NUMBERS</h1>
+  <h4>⬇️Select Level To Start⬇️</h4>
+  <h3 id="name">HELLO USER</h3>
+  <button type="button" class="start-btn" id="stage1"> 1</button>
+  <button type="button" class="start-btn" id="stage2"> 2</button>
+  <button type="button" class="start-btn" id="stage3">3</button>
+  <button type="button" class="start-btn" id="start-btn">pause ▶️</button>
+  <button type="button" class="start-btn" id="new-game">NEW GAME</button>
+  <button type="button" class="start-btn" id="sendHome">⬅️</button>
+  <div class="start-btn" id="score"></div>
+  <div class="start-btn" id="maxScore"></div>
+  <button type="button" id="audio">🔊</button>
+
+  <div class="grid-container"> </div>
+  <div id="instructions">
+    <h2>?HOW TO PLAY</h2>
+    <p>
+      By downloading the numbered blocks<br> below, you can add them up<br> !and make bigger summed blocks<br> More
+      numbered blocks Higher<br> more you add, more points<br> you get, more points,<br> !higher in ranks<br> Throw
+      the blocks on one<br> .other with it number<br> - merge or combine them <br>.into a larger number
+      When you reach <br>the number 4096 - you will win!<br> But if you fill one column <br>....to the top - you will
+      lose
+    </p>
+  </div>
+  </div>
+  <div id="audios">
+    <audio id="moveAudio">
+      <source src="../audio/rotate.ogg" type="audio/ogg">
+      <source src="../audio/rotate.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="crushAudio">
+      <source src="../audio/crash.ogg" type="audio/ogg">
+      <source src="../audio/crash.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="looseAudio1">
+      <source src="../audio/game-over1.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="looseAudio2">
+      <source src="../audio/game-over2.mp3" type="audio/ogg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="winAudio">
+      <source src="../audio/win.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio id="pauseAudio">
+      <source src="../audio/pause.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+
+  </div>
+  <script src="../js/game.js"></script>
+
+</body>
+
+</html>

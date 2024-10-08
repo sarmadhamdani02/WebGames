@@ -12,8 +12,8 @@ body {
   overflow: hidden;
 }
 
-.nav-bar {
-  padding: 0 4vw;
+nav-bar {
+  padding: 0 4vw; /* Existing padding */
   font-family: "Press Start 2P", cursive;
   color: white;
   display: flex;
@@ -22,6 +22,15 @@ body {
   height: 50px;
   background-color: rgb(0, 144, 144);
   white-space: nowrap;
+  padding-right: 20px; /* Added right padding */
+}
+
+@media (min-width: 701px) and (max-width: 1050px) {
+  .nav-bar {
+    padding: 0 2vw;
+    padding-right: 20px; /* Ensures right padding on smaller screens as well */
+    height: 60px;
+  }
 }
 
 .nav-bar a {

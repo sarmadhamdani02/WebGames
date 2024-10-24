@@ -206,6 +206,7 @@ body{
     flex-direction: column;
     gap: 8px;
     margin-bottom: 20px;
+    pointer-events: auto;
 }
 
 .option-panel .options{
@@ -476,4 +477,70 @@ body{
          padding: 5px;
          width: 50%;
             }
+}
+
+.exit-btn{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: crimson;
+    color: white;
+    border: none;
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    border-radius: 10px;
+    cursor: pointer;
+    display: none;
+    z-index: 999;
+}
+
+.exit-btn:hover {
+    background-color: darkred;
+}
+
+.question-tracker {
+    font-size: 1.5em;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.question-tracker span {
+    font-weight: bold;
+}
+
+/* Language Select Styling */
+#language {
+    width: 200px; 
+    padding: 10px; 
+    font-size: 16px; 
+    border: 2px solid #3498db; 
+    border-radius: 5px; 
+    background-color: #f9f9f9; 
+    color: #333; 
+    transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+/* Change border color on focus */
+#language:focus {
+    border-color: #2980b9; /* Darker border color when focused */
+    outline: none; /* Remove default outline */
+}
+
+/* Change background color on hover */
+#language:hover {
+    background-color: #e9ecef; /* Light gray background on hover */
+}
+
+/* Style the options */
+#language option {
+    padding: 10px; /* Add padding to options */
+}
+
+/* Optional: Adjust the select box in mobile view */
+@media (max-width: 600px) {
+    #language {
+        width: 100%; /* Full width on smaller screens */
+    }
 }

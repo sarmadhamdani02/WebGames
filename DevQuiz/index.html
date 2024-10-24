@@ -88,6 +88,14 @@
                 <span class="function">programmer<span class="brackets">()</span></span>
                 <span class="brackets">){</span>
                     <br>
+                <!-- Language selection dropdown -->
+                <label for="language">Select Programming Language:</label>
+                <select id="language" style="margin-left: 10px;">
+                    <option value="javascript">JavaScript</option>
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </select>
+                <br>  
                 <span class="btn">&emsp;&emsp;<button class="start-btn">startQuiz<span class="btn-brackets">()</span><span class="btn-colon">;</span></button></span>
                 <br>
                 <span class="if-else"><span class="brackets">}</span><br>else<span class="brackets">{</span></span>
@@ -111,17 +119,23 @@
                 <h1>QUESTION</h1>
             </div>
             <div class="option-panel">
-                <button class="options option-a">OPTION</button>
-                <button class="options option-b">OPTION</button>
-                <button class="options option-c">OPTION</button>
-                <button class="options option-d">OPTION</button>
+                <button id="optionA" class="options option-a">OPTION A</button>
+                <button id="optionB" class="options option-b">OPTION B</button>
+                <button id="optionC" class="options option-c">OPTION C</button>
+                <button id="optionD" class="options option-d">OPTION D</button>
             </div>
+            
         </div>
         <div class="question-count-wrapper">
             <span class="question-count"></span>
             <span class="questions-array-length"></span>
             <span class="questions-asked-array"></span>
         </div>
+        <div class="question-tracker">
+            <span id="current-question">1</span>/<span id="total-questions">20</span>
+          </div>
+                
+        <div class="exit-btn" onclick="exitQuiz()">Exit Quiz</div>
     </div>
 
 </body>

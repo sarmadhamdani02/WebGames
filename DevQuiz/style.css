@@ -166,14 +166,14 @@ body{
 }
 
 .game-screen .score-panel{
-    font-size: 2vw;
+    font-size: 4vw;
     margin-left: 78vw;
     display: flex;
     gap: 5px;
 }
 
 .game-screen .score-panel .score{
-    font-size: 3vw;
+    font-size: 4vw;
 }
 
 
@@ -182,6 +182,7 @@ body{
     /* backdrop-filter: blur(5px); */
     display: flex;
     flex-direction: column;
+    align-items: center;
     /* height: 75vh; */
     height: fit-content;
     width: 70vw;
@@ -206,7 +207,6 @@ body{
     flex-direction: column;
     gap: 8px;
     margin-bottom: 20px;
-    pointer-events: auto;
 }
 
 .option-panel .options{
@@ -508,39 +508,4 @@ body{
 
 .question-tracker span {
     font-weight: bold;
-}
-
-/* Language Select Styling */
-#language {
-    width: 200px; 
-    padding: 10px; 
-    font-size: 16px; 
-    border: 2px solid #3498db; 
-    border-radius: 5px; 
-    background-color: #f9f9f9; 
-    color: #333; 
-    transition: border-color 0.3s, background-color 0.3s; /* Smooth transition for hover effect */
-}
-
-/* Change border color on focus */
-#language:focus {
-    border-color: #2980b9; /* Darker border color when focused */
-    outline: none; /* Remove default outline */
-}
-
-/* Change background color on hover */
-#language:hover {
-    background-color: #e9ecef; /* Light gray background on hover */
-}
-
-/* Style the options */
-#language option {
-    padding: 10px; /* Add padding to options */
-}
-
-/* Optional: Adjust the select box in mobile view */
-@media (max-width: 600px) {
-    #language {
-        width: 100%; /* Full width on smaller screens */
-    }
 }

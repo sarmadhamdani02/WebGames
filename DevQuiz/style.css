@@ -28,6 +28,34 @@ body{
    
 }
 
+.languages {
+
+    display: inline-block;
+    color: #5aceff;
+    font-family: 'Fira Code', monospace;
+    font-size: 30px;
+    margin-left: 70px;
+    padding-top: 10px;
+
+}
+
+#language {
+    font-size: 20px;
+    background-color: transparent;
+    color:#e9ef84;
+    border-color: #e9ef84;
+    padding: 5px;
+}
+
+#language .opt {
+    background-color: black;
+}
+
+.start-panel, .h1 {
+    margin: 10px;
+}
+
+
 .question-count{
     display: inherit;
 } 
@@ -45,6 +73,16 @@ body{
     justify-content: center;    
 }
 
+.game-screen .instruction-panel {
+    display: none;
+    position: fixed;
+    margin-right: 80vw;
+    font-size: 20px;
+    padding: 10px;
+    
+}
+
+
 .main-screen{
     background-color: #1a1b26;
     height: 100vh;
@@ -61,7 +99,8 @@ body{
 .if-else,
 .function,
 .brackets,
-.init{
+.init,
+.exit1{
     font-family: 'Fira Code', monospace;
 }
 
@@ -104,7 +143,7 @@ body{
     margin-top: 20px;
     margin-bottom: 10px;
     cursor: pointer;
-    font-size: 1.3vw;
+    font-size: 20px;
 }
 
 .restart-btn{
@@ -114,11 +153,12 @@ body{
 .start-btn:hover,
 .restart-btn:hover{
     color: #4def74;
+    box-shadow: 0 0 20px #4def74;
 }
 
 .start-btn:hover .btn-brackets,
 .restart-btn:hover .btn-brackets{
-    color: #2c4f9e;
+    color: #2d4f9f;
 }
 
 .start-btn:hover .btn-colon,
@@ -140,7 +180,7 @@ body{
 
 .exit:hover,
 .read-instruction:hover{
-    text-shadow: #4def74 1px 0 10px;;
+    text-shadow: #4def74 1px 0 10px;
 }
 
 .exit:hover .brackets,
@@ -157,23 +197,25 @@ body{
     font-family: 'Nunito', sans-serif;
     text-transform: capitalize;
     color: white;
-    background-color: rgb(89, 14, 89);
+    background-color:#1a1b26;
     height: 100vh;
     width: 100vw;
-    
     flex-direction: column;
+    justify-content:normal;
    
 }
 
 .game-screen .score-panel{
-    font-size: 4vw;
+    font-size: 30px;
     margin-left: 78vw;
-    display: flex;
+    padding: 10px;;
     gap: 5px;
 }
 
 .game-screen .score-panel .score{
-    font-size: 4vw;
+    
+    font-size: 33px;
+    display: inline-block
 }
 
 
@@ -183,9 +225,12 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     /* height: 75vh; */
     height: fit-content;
     width: 70vw;
+    
+   
     border: 1px solid white;
     border-radius: 10px;
     gap: 80px;
@@ -197,8 +242,8 @@ body{
     text-align: center;
     margin-top: 20px;
     color: white;
-    font-family: 'Slabo 13px', serif;
-    font-size: clamp(0.5rem, 1.2vw,5rem);
+    font-family: 'Fira Code', monospace;
+    font-size: 20px;
 }
 
 .option-panel{
@@ -222,10 +267,12 @@ body{
     font-size: clamp(1.1rem, 1.35vw,5rem);
     min-width: 50vw;
     text-transform: lowercase;
+   
 }
 
 .options:hover{
-    background-color: rgba(255, 255, 255, 0.300);
+    box-shadow: 0 0 10px #4def74;
+    
 }
 
 .options:active{
@@ -248,6 +295,7 @@ body{
     font-family: 'Nunito', sans-serif;
     color: white;
     flex-direction: column;
+    display: flex;
 }
 
 .exit{
@@ -372,7 +420,7 @@ body{
     
     .start-btn,
     .restart-btn{
-        padding: 10px 25px;
+        padding: 5px 25px;
         border-radius: 30px;
         font-size: 5vw;
     }
@@ -398,12 +446,12 @@ body{
     }
     
     .game-panel{
-        width: 90vw;
+        /* width: 90vw; */
         /* height: 90vh; */
         /* height: fit-content; */
         overflow: hidden;
         padding: 20px 10px ;
-        gap: 40px;
+        /* gap: 40px; */
     }
     
         .game-panel .score-panel{
@@ -423,19 +471,23 @@ body{
             width: 100%;
          }
 
-         .end-result{
+         .game-end-panel .end-result{
+            margin-left: 10vw;
             padding: 40px 30px;
+            display: flex;
          }
 
       .game-screen .score-panel{
-            font-size: 5vw;
+            padding-top: 20px;
+            font-size: 2vw;
             margin-left: 72vw;
            
            
         }
 
         .game-screen .score-panel .score{
-            font-size: 5vw;
+            padding-top: 3px;
+            font-size: 3vw;
            
         }
        
@@ -484,26 +536,40 @@ body{
     bottom: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background-color: crimson;
+    background-color: transparent;
     color: white;
-    border: none;
-    padding: 15px 30px;
-    font-size: 1.5rem;
-    border-radius: 10px;
+    border: 1px solid rgb(248, 248, 248);
+    padding: 10px 25px;
+    font-size: 15px;
+    border-radius: 30px;
     cursor: pointer;
     display: none;
     z-index: 999;
 }
 
 .exit-btn:hover {
-    background-color: darkred;
+    border-color: #ffffff;
+    box-shadow: 0 0 30px #f44f4f   
+}
+
+.exit-btn .exit1:hover .btn-brackets{
+    border-color: #4def74;
+    color:#2d4f9f;
+}
+
+.exit-btn .exit1:hover .btn-colon {
+    color:#5aceff;
+}
+
+.exit-btn .exit1:hover {
+    color: rgb(255, 98, 98);
 }
 
 .question-tracker {
     font-size: 1.5em;
-    text-align: center;
-    margin-bottom: 20px;
-    color: #333;
+    text-align: left;
+    position:var(--position-top-left-distance);
+    color: #ffffff;
 }
 
 .question-tracker span {

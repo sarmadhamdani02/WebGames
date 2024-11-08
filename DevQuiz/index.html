@@ -32,25 +32,32 @@
                     <h3 class="remark-emoji">{emo}</h3>
                     <h3 class="score-section">score: <span class="score-box">0</span>/<span class="total-score">0<script></script></span></h3>
                     <h3 class="percent">( 0% )</h3>
-                    <br><br>
-                    <span class="btn">&emsp;&emsp;<button class="restart-btn">restartQuiz<span class="btn-brackets">()</span><span class="btn-colon">;</span></button></span>
+                    <span class="btn">&emsp;<button class="restart-btn">restartQuiz<span class="btn-brackets">()</span><span class="btn-colon">;</span></button></span>
 
 
                 </span>
-                <br>
+                
                 <span class="brackets">}</span>
 
         </h1>
     </div>
 
     <div class="game-instructions">
-        <div class="close-btn">
+        <div class="close-btn1">
             <h1 class="exit">
                 <span class="code">exit</span>
                 <span class="brackets">()</span>
                 <span class="colon">;</span>
             </h1>
         </div>
+        <div class="close-btn2">
+            <h1 class="exit">
+                <span class="code">exit</span>
+                <span class="brackets">()</span>
+                <span class="colon">;</span>
+            </h1>
+        </div>
+        
 
         <div class="instructions">
             <h1 class="inst-heading">
@@ -65,7 +72,7 @@
                 <ul>
                     <li>If you are not programmer ( or related to field of <span class="is-love">Computer Science❤️</span> ), this game might be not for you as this game is for programmers.</li>
                     <li>The game presents questions related to programming or computer science, each with four answer options.</li>
-                    <li>Payers must select the option they believe is the correct answer.</li>
+                    <li>Players must select the option they believe is the correct answer.</li>
                     <li>Correct answers are worth 10 points, and there's no penalty for wrong answers.</li>
                     <li>The final score is determined by the number of correct answers, with a maximum of 10 points per question.</li>
                     <li>At the end of the game, players will see their total score as an indicator of their programming knowledge.</li>
@@ -82,15 +89,22 @@
                 <span class="brackets">)</span>
                 <span class="colon">;</span>
                 </span>
-                <br>
-                <br>
+                <br><br>
                 <span class="if-else">if&nbsp;</span><span class="brackets">(</span>
                 <span class="function">programmer<span class="brackets">()</span></span>
                 <span class="brackets">){</span>
                     <br>
+                <!-- Language selection dropdown -->
+                 <div class = "languages"> Console.log("<label for="language">Select Programming <br> Language:</label>
+                <select id="language" style="margin-left: 10px;">
+                    <option class = "opt" value="javascript">JavaScript</option>
+                    <option class = "opt" value="python">Python</option>
+                    <option class = "opt" value="java">Java</option>
+                </select>")</div>
+                <br>  
                 <span class="btn">&emsp;&emsp;<button class="start-btn">startQuiz<span class="btn-brackets">()</span><span class="btn-colon">;</span></button></span>
                 <br>
-                <span class="if-else"><span class="brackets">}</span><br>else<span class="brackets">{</span></span>
+                <span class="if-else"><span class="brackets">}</span>  else  <span class="brackets">{</span></span>
                 <br>
                 <span class="function read-instruction">&emsp;&emsp;readInstruction<span class="brackets">()</span><span class="colon">;</span></span>
                 <br>
@@ -99,30 +113,49 @@
         </div>
     </div>
 
-    <div class="instruction-panel">
+    <!-- <div class="instruction-panel">
         
-    </div>
+    </div> -->
 
     <div class="game-screen">
-        <div class="score-panel">Score: <span class="score">0</span></div>
+        <div class="instruction-panel">
+            <div class="function read-instruction">Instructions</div>  
+        </div>
+        
+        <span class = "string"> Quiz </span>
+        
+        <div class="question-tracker">
+            <span class = "code">Question => {<span id="current-question">1</span>/<span id="total-questions">10</span>} </p>
+          </div>
+        <div class="score-panel"><span class = "if-else">Score(<span class="score">0</span>)</span>
+            
+        </div>
+        <!-- <div class="question-tracker">
+            <p>Question: <span id="current-question">1</span>/<span id="total-questions">10</span></p>
+          </div> -->
         <!-- here all the game data will be present -->
         <div class="game-panel">
             <div class="question-panel">
-                <h1>QUESTION</h1>
+                <h3 class>QUESTION</h3>
             </div>
+            <div class = "function">
             <div class="option-panel">
-                <button class="options option-a">OPTION</button>
-                <button class="options option-b">OPTION</button>
-                <button class="options option-c">OPTION</button>
-                <button class="options option-d">OPTION</button>
+                <button id="optionA" class="options option-a">OPTION A</button>
+                <button id="optionB" class="options option-b">OPTION B</button>
+                <button id="optionC" class="options option-c">OPTION C</button>
+                <button id="optionD" class="options option-d">OPTION D</button>
             </div>
+            </div>
+            
         </div>
         <div class="question-count-wrapper">
-            <span class="question-count"></span>
+            <span class="question-count">  </span>
             <span class="questions-array-length"></span>
             <span class="questions-asked-array"></span>
         </div>
-    </div>
-
+        
+      
+          <div class="exit-btn" onclick="exitQuiz()"><span class = "exit1">exitQuiz<span class = "btn-brackets">()</span><span class = "btn-colon">;</span> </span></div>
+        </div>
 </body>
 </html>
